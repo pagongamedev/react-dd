@@ -15,6 +15,8 @@ Create By Pagongamedev
 | Library   | react-spinners-kit |  1.9.1  | https://dmitrymorozoff.github.io/react-spinners-kit/ | React Spinner SVG   |
 | Library   | chart.js           |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart               |
 | Library   | react-chartjs-2    |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter |
+| Library   | zustand            |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management    |
+| Library   | react-router-dom   |  6.4.5  | https://reactrouter.com/en/main                      | Route Management    |
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |

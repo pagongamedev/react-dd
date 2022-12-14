@@ -2,13 +2,13 @@ import create from 'zustand';
 
 import { helperZustandUseStore } from '../../../../core/helper/zustand';
 
-export const store = create((set) => ({
+export const store = create((setState, getState) => ({
   user: '',
-  setUser: (name: string) => set(() => ({ user: name })),
+  setUser: (name: string) => setState(() => ({ user: name })),
   cartCount: 0,
-  login: () => set(() => ({ user: 'Jack' })),
-  logout: () => set(() => ({ user: '' })),
-  addToCart: () => set((state: any) => ({ cartCount: state.cartCount + 1 })),
+  login: () => setState(() => ({ user: 'Jack' })),
+  logout: () => setState(() => ({ user: '' })),
+  addToCart: () => setState((state: any) => ({ cartCount: state.cartCount + 1 })),
 }));
 
 export const useStore = (stateList: string[], isShallow?: boolean) => {

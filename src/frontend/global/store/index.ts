@@ -2,9 +2,9 @@ import create from 'zustand';
 
 import { helperZustandUseStore } from '../../../core/helper/zustand';
 
-export const store = create((set) => ({
+export const store = create((setState, getState) => ({
   user: '',
-  setUser: (name: string) => set(() => ({ user: name })),
+  setUser: (name: string) => setState(() => ({ user: name })),
 }));
 
 export const useStore = (stateList: string[], isShallow?: boolean) => {

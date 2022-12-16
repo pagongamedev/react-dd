@@ -1,6 +1,5 @@
+import { helperZustand } from 'universal-helper';
 import create from 'zustand';
-
-import { helperZustandUseStore } from '../../../../core/helper/zustand';
 
 export const store = create((setState, getState) => ({
   user: '',
@@ -12,7 +11,7 @@ export const store = create((setState, getState) => ({
 }));
 
 export const useStore = (stateList: string[], isShallow?: boolean) => {
-  return helperZustandUseStore(stateList, store, isShallow);
+  return helperZustand.StateMapping(stateList, store, isShallow);
 };
 
-export const setStore = (prop: any) => store.setState(prop);
+export const setStore = (state: any) => store.setState(state);

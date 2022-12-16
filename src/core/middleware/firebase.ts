@@ -6,8 +6,7 @@ import {
   httpsCallable,
   // connectFunctionsEmulator,
 } from 'firebase/functions';
-
-import { helperPromise } from '..//helper/promise';
+import { helperPromise } from 'universal-helper';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_CRED_APIKEY,
@@ -38,7 +37,9 @@ export const init = () => {
 // };
 
 export const FirebaseSignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
-  return helperPromise(signInWithEmailAndPassword(auth, sEmail, sPassword));
+  return helperPromise.GolangResponse(
+    signInWithEmailAndPassword(auth, sEmail, sPassword),
+  );
 };
 
 export const FirebaseSignOut = () => {

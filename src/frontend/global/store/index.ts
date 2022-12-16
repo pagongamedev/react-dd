@@ -1,6 +1,6 @@
+// import { helperZustandUseStore } from 'universal-helper';
+import { helperZustand } from 'universal-helper';
 import create from 'zustand';
-
-import { helperZustandUseStore } from '../../../core/helper/zustand';
 
 export const store = create((setState, getState) => ({
   user: '',
@@ -8,7 +8,7 @@ export const store = create((setState, getState) => ({
 }));
 
 export const useStore = (stateList: string[], isShallow?: boolean) => {
-  return helperZustandUseStore(stateList, store, isShallow);
+  return helperZustand.UseStore(stateList, store, isShallow);
 };
 
 export const setStore = (prop: any) => store.setState(prop);

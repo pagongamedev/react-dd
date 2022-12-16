@@ -13,7 +13,7 @@ const i18nList: any[] = [initI18N({ name: 'main' }), ...Route.i18nList];
 class JSX extends React.Component<any, any> {
   render(): ReactNode {
     return (
-      <div className="Prompt">
+      <div>
         <Context>
           <UILoader.JSX>
             <Route.JSX />

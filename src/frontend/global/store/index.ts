@@ -8,7 +8,7 @@ export const store = create((setState, getState) => ({
 }));
 
 export const useStore = (stateList: string[], isShallow?: boolean) => {
-  return helperZustand.UseStore(stateList, store, isShallow);
+  return helperZustand.StateMapping(stateList, store, isShallow);
 };
 
 export const setStore = (prop: any) => store.setState(prop);

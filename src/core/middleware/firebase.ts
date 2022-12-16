@@ -9,12 +9,13 @@ import {
 import { helperPromise } from 'universal-helper';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_CRED_APIKEY,
-  authDomain: import.meta.env.VITE_FIREBASE_CRED_AUTHDOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_CRED_PROJECTID,
-  storageBucket: import.meta.env.VITE_FIREBASE_CRED_STORAGEBUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_CRED_MESSAGINGSENDERID,
-  appId: import.meta.env.VITE_FIREBASE_CRED_APPID,
+  apiKey: import.meta.env.VITE_FIREBASE_CRED_APIKEY || undefined,
+  authDomain: import.meta.env.VITE_FIREBASE_CRED_AUTHDOMAIN || undefined,
+  databaseURL: import.meta.env.VITE_FIREBASE_CRED_DATABASEURL || undefined,
+  projectId: import.meta.env.VITE_FIREBASE_CRED_PROJECTID || undefined,
+  storageBucket: import.meta.env.VITE_FIREBASE_CRED_STORAGEBUCKET || undefined,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_CRED_MESSAGINGSENDERID || undefined,
+  appId: import.meta.env.VITE_FIREBASE_CRED_APPID || undefined,
 };
 
 let app;

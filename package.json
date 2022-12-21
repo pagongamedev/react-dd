@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "npm": ">=8.19.0 <9.0.0",
+    "node": ">=19.0.0 <20.0.0"
+  },
   "scripts": {
     "start": "vite --host",
     "tsc": "tsc --watch",
@@ -13,6 +17,7 @@
     "lint": "npm lint:format && npm lint:fix"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
     "axios": "^1.2.1",
     "chart.js": "^4.0.1",
     "firebase": "^9.15.0",
@@ -20,11 +25,13 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^5.0.1",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.41.0",
     "react-i18next": "^12.1.1",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.5",
     "react-spinners-kit": "^1.9.1",
-    "universal-helper": "^0.0.3",
+    "universal-helper": "^0.0.4",
+    "yup": "^0.32.11",
     "zustand": "^4.1.5"
   },
   "devDependencies": {

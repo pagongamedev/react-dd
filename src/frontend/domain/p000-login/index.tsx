@@ -4,9 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { HiOutlineUserCircle } from 'react-icons/hi';
-import { MdLockOutline } from 'react-icons/md';
+import { RiEyeLine, RiEyeOffLine, RiLockLine, RiUserLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 import { helperTime } from 'universal-helper';
 import * as yup from 'yup';
@@ -42,7 +40,7 @@ const JSX = () => {
 
   const firebaseLogin = async (sEmail: string, sPassword: string) => {
     setLoading(true);
-    await helperTime.WaitForMilliSecond(500);
+    await helperTime.WaitForMilliSecond(300);
     setLoading(false);
 
     if (sEmail != testUser) {
@@ -119,11 +117,7 @@ const JSX = () => {
                 >
                   <div className="py-0.5 divide-x-2 flex divide-gray-300 pr-2">
                     <div className="flex-none w-10 my-auto pb-0.5">
-                      <HiOutlineUserCircle
-                        color="DimGray"
-                        size="1.2em"
-                        className="block m-auto"
-                      />
+                      <RiUserLine color="DimGray" size="1.2em" className="block m-auto" />
                     </div>
                     <input
                       {...register('username')}
@@ -146,11 +140,7 @@ const JSX = () => {
                 >
                   <div className="py-0.5 divide-x-2 flex divide-gray-300">
                     <div className="flex-none w-10 my-auto pb-0.5">
-                      <MdLockOutline
-                        color="DimGray"
-                        size="1.2em"
-                        className="block m-auto"
-                      />
+                      <RiLockLine color="DimGray" size="1.2em" className="block m-auto" />
                     </div>
                     <input
                       placeholder={t('form.password.placeholder') || ''}
@@ -164,14 +154,14 @@ const JSX = () => {
                       onClick={onClickShowPassword}
                     >
                       {isShowPassword && (
-                        <AiOutlineEyeInvisible
+                        <RiEyeOffLine
                           color="DimGray"
                           size="1.2em"
                           className="block m-auto"
                         />
                       )}
                       {!isShowPassword && (
-                        <AiOutlineEye
+                        <RiEyeLine
                           color="DimGray"
                           size="1.2em"
                           className="block m-auto"

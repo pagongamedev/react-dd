@@ -1,4 +1,4 @@
-import { MdMenu } from 'react-icons/md';
+import { BiCube, BiGame, BiHome, BiMenu } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 import { useGlobalStore } from '../../../store';
@@ -14,13 +14,40 @@ const JSX = (props: any) => {
             <div className="flex-1 mt-1 truncate text-ellipsis">{menu.sHeaderName}</div>
           </div>
           <div className="flex-1 flex flex-col overflow-clip">{props.children}</div>
-          <div className="h-15 pb-0.5 bg-white w-full flex flex-row justify-end items-center px-5">
+          <div className="h-15 pb-0.5 bg-white w-full flex flex-row justify-around items-center px-5">
             <Link
               className="flex justify-items-center"
               to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
             >
-              <MdMenu
+              <BiHome
                 className={menu.iIconID === 1 ? 'text-primary-select' : 'text-primary'}
+                size="2.3em"
+              />
+            </Link>
+            <Link
+              className="flex justify-items-center"
+              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+            >
+              <BiCube
+                className={menu.iIconID === 2 ? 'text-primary-select' : 'text-primary'}
+                size="2.3em"
+              />
+            </Link>
+            <Link
+              className="flex justify-items-center"
+              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+            >
+              <BiGame
+                className={menu.iIconID === 3 ? 'text-primary-select' : 'text-primary'}
+                size="2.3em"
+              />
+            </Link>
+            <Link
+              className="flex justify-items-center"
+              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+            >
+              <BiMenu
+                className={menu.iIconID === 4 ? 'text-primary-select' : 'text-primary'}
                 size="2.7em"
               />
             </Link>

@@ -53,7 +53,8 @@ export const store = create((setState, getState) => ({
     // console.log('resAuth.res ', resAuth.res);
 
     // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
-    // setUserData(resAuth.res);
+    const { setUserData }: any = storePersist.getState();
+    setUserData(resAuth.res);
     setState({ isLoading: false });
     return { res: resAuth.res, error: null };
     // isLoading
@@ -62,7 +63,8 @@ export const store = create((setState, getState) => ({
     setState({ isLoading: true });
     await FirebaseSignOut();
     // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
-    // setUserData(null);
+    const { setUserData }: any = storePersist.getState();
+    setUserData(null);
     setState({ isLoading: false });
   },
 }));

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import TemplateMobile from '../../global/component/templates/template-mobile';
 import { useGlobalStore } from '../../global/store';
-import UIMock from './component/UIMock';
+import UIMock from './component/ui-mock';
 import initI18N from './i18n';
 
 const i18nDomainName = 'dashboard';

@@ -1,9 +1,10 @@
+import { helperI18Next } from 'universal-helper';
+
 import * as middlewareFirebase from './firebase';
-import * as middlewareI18n from './i18n';
 
 export const middlewareInit = ({ i18nList = [] }: { i18nList: any[] }) => {
   console.log('Middleware Init');
-  middlewareI18n.init(
+  helperI18Next.MiddlewareInit(
     {
       debug: true,
       fallbackLng: 'th',
@@ -11,5 +12,5 @@ export const middlewareInit = ({ i18nList = [] }: { i18nList: any[] }) => {
     i18nList,
   );
 
-  // middlewareFirebase.init();
+  // middlewareFirebase.Init();
 };

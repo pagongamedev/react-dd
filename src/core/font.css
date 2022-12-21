@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'RSU';
+  src: local('RSU'), url('/assets/fonts/RSU/RSU_Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+// not use ./ for css and vite bind same production
+@font-face {
+  font-family: 'RSU';
+  src: local('RSU'), url('/assets/fonts/RSU/RSU_BOLD.ttf') format('truetype');
+  font-weight: bold;
+}
+
+.RSU {
+  font-family: 'RSU';
+}

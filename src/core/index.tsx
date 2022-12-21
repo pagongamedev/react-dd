@@ -1,5 +1,6 @@
 import 'virtual:windi.css';
 import './index.css';
+import './font.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -12,7 +13,7 @@ fixbugInit();
 middlewareInit({ i18nList: Main.i18nList });
 
 const StrictMode = (props: { children: React.ReactNode }) => {
-  if (import.meta.env.VITE_DEBUG_IS_STRICT_MODE) {
+  if (import.meta.env.VITE_DEBUG_IS_STRICT_MODE == 'true') {
     console.log('Strict Mode');
     return <React.StrictMode>{props.children}</React.StrictMode>;
   }

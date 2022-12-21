@@ -1,0 +1,16 @@
+{
+    "form": {
+        "username": {
+            "placeholder": "ผู้ใช้งาน"
+        },
+        "password": {
+            "placeholder": "รหัสผ่าน"
+        },
+        "login": "เข้าสู่ระบบ"
+    },
+    "validate": {
+        "required": "กรุณากรอกในช่องว่าง",
+        "userNotFound": "ไม่พบผู้ใช้งาน",
+        "passwordWrong": "รหัสผ่านไม่ถูกต้อง"
+    }
+}

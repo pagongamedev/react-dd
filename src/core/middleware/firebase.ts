@@ -1,11 +1,12 @@
 import { initializeApp } from 'firebase/app';
 import { Auth, getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { Database, DataSnapshot, getDatabase, onValue, ref } from 'firebase/database';
 import {
   Functions,
-  getFunctions,
   httpsCallable,
   // connectFunctionsEmulator,
 } from 'firebase/functions';
+import React from 'react';
 import { helperPromise } from 'universal-helper';
 
 const firebaseConfig = {
@@ -21,11 +22,19 @@ const firebaseConfig = {
 let app;
 let auth: Auth;
 let functions: Functions;
+let db: Database;
 
-export const init = () => {
+export const Init = () => {
   app = initializeApp(firebaseConfig);
   auth = getAuth(app);
-  functions = getFunctions(app, import.meta.env.VITE_FIREBASE_CONFIG_FUNCTION_REGION);
+  db = getDatabase(app);
+  // functions = getFunctions(app, import.meta.env.VITE_FIREBASE_CONFIG_FUNCTION_REGION);
+
+  // const refID2 = ref(db, 'sbs-device' + '/id-2');
+  // onValue(refID2, (snapshot: DataSnapshot) => {
+  //   const data = snapshot.val();
+  //   console.log('ID 2 Data :', data);
+  // });
   // console.log('init firebase');
 };
 
@@ -36,6 +45,21 @@ export const init = () => {
 // export const getFunctions = () => {
 //   return functions;
 // };
+export const FirebaseRealtimeDatabaseSubscribe = (
+  topic: string,
+  setStateLocal: React.Dispatch<any>,
+  callback?: any,
+) => {
+  const refID1 = ref(db, '<>' + topic);
+  onValue(refID1, (snapshot: DataSnapshot) => {
+    const data = snapshot.val();
+    // console.log(topic + ' Data :', data);
+    setStateLocal(data);
+    if (callback) {
+      callback();
+    }
+  });
+};
 
 export const FirebaseSignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
   return helperPromise.GolangResponse(

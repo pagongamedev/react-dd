@@ -4,8 +4,7 @@ import './index.css';
 import React from 'react';
 import { ReactNode } from 'react';
 
-import UILoader from './component/UILoader';
-import { Context } from './context';
+import UILoader from './component/atoms/ui-loader';
 import initI18N from './i18n';
 import Route from './route';
 
@@ -13,12 +12,10 @@ const i18nList: any[] = [initI18N({ name: 'main' }), ...Route.i18nList];
 class JSX extends React.Component<any, any> {
   render(): ReactNode {
     return (
-      <div>
-        <Context>
-          <UILoader.JSX>
-            <Route.JSX />
-          </UILoader.JSX>
-        </Context>
+      <div className="RSU">
+        <UILoader.JSX>
+          <Route.JSX />
+        </UILoader.JSX>
       </div>
     );
   }

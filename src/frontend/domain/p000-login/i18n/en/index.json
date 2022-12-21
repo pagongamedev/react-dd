@@ -1,0 +1,16 @@
+{
+    "form": {
+        "username": {
+            "placeholder": "username"
+        },
+        "password": {
+            "placeholder": "password"
+        },
+        "login": "login"
+    },
+    "validate": {
+        "required": "please filling space",
+        "userNotFound": "uset not found",
+        "passwordWrong": "wrong password"
+    }
+}

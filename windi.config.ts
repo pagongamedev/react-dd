@@ -18,6 +18,11 @@ export default {
       },
       colors: {
         // Configure your color palette here
+        primary: '#1e71c9',
+        'primary-select': '#2990ff',
+        'primary-hover': '#3f8de0',
+        'secondary-select': '#F64A4A',
+        'secondary-hover': '#FF5757',
       },
       keyframes: {
         scaleltor: {

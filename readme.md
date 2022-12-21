@@ -3,22 +3,24 @@ Create By Pagongamedev
 
 # Stack
 
-| Stack     | Name               | Version | Link                                                 | Note                  |
-| --------- | ------------------ | :-----: | ---------------------------------------------------- | --------------------- |
-| Framework | react              | 18.2.0  | https://reactjs.org/                                 | Installed by ViteJS   |
-| Framework | react-dom          | 18.2.0  | https://reactjs.org/                                 | Installed by ViteJS   |
-| Library   | react-router-dom   |  6.4.5  | https://reactrouter.com/en/main                      | Route Management      |
-| Library   | i18next            | 22.4.5  | https://www.i18next.com/                             | i18n                  |
-| Library   | react-i18next      | 12.1.1  | https://react.i18next.com/                           | i18n for react        |
-| Library   | axios              |  1.2.1  | https://axios-http.com/                              | HTTP Client API       |
-| Library   | firebase           | 9.15.0  | https://firebase.google.com/docs/auth                | Firebase Auth         |
-| Library   | react-icons        |  4.7.1  | https://react-icons.github.io/react-icons/           | React Icon Font       |
-| Library   | react-spinners-kit |  1.9.1  | https://dmitrymorozoff.github.io/react-spinners-kit/ | React Spinner SVG     |
-| Library   | chart.js           |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart                 |
-| Library   | react-chartjs-2    |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
-| Library   | zustand            |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
-| Library   | universal-helper   |  0.0.2  | https://reactrouter.com/en/main                      | Helper for clean code |
-
+| Stack     | Name                | Version | Link                                                 | Note                  |
+| --------- | ------------------- | :-----: | ---------------------------------------------------- | --------------------- |
+| Framework | react               | 18.2.0  | https://reactjs.org/                                 | Installed by ViteJS   |
+| Framework | react-dom           | 18.2.0  | https://reactjs.org/                                 | Installed by ViteJS   |
+| Library   | react-router-dom    |  6.4.5  | https://reactrouter.com/en/main                      | Route Management      |
+| Library   | react-hook-form     | 7.41.0  | https://react-hook-form.com                          | Helper Form           |
+| Library   | @hookform/resolvers | 2.9.10  | https://github.com/react-hook-form/resolvers         | Schema Resolve        |
+| Library   | yub                 | 0.11.1  | https://github.com/jquense/yup                       | Schema for form       |
+| Library   | react-i18next       | 12.1.1  | https://react.i18next.com/                           | i18n for react        |
+| Library   | i18next             | 22.4.5  | https://www.i18next.com/                             | i18n                  |
+| Library   | axios               |  1.2.1  | https://axios-http.com/                              | HTTP Client API       |
+| Library   | firebase            | 9.15.0  | https://firebase.google.com/docs/auth                | Firebase Auth         |
+| Library   | react-icons         |  4.7.1  | https://react-icons.github.io/react-icons/           | React Icon Font       |
+| Library   | react-spinners-kit  |  1.9.1  | https://dmitrymorozoff.github.io/react-spinners-kit/ | React Spinner SVG     |
+| Library   | chart.js            |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart                 |
+| Library   | react-chartjs-2     |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
+| Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
+| Library   | universal-helper    |  0.0.4  | https://reactrouter.com/en/main                      | Helper for clean code |
 
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |

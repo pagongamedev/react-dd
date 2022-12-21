@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import TemplateMobile from '../../global/component/templates/template-mobile';
 import { useGlobalStore } from '../../global/store';
+import UIMock from './component/UIMock';
 import initI18N from './i18n';
 
 const i18nDomainName = 'dashboard';
@@ -41,7 +42,21 @@ const JSX = () => {
         />
         TH
       </div>
-      <div className="flex-1 overflow-x-auto"></div>
+      <div className="flex-1 overflow-x-auto">
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+        <UIMock.JSX />
+      </div>
     </TemplateMobile.JSX>
   );
 };

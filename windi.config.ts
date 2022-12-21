@@ -23,6 +23,8 @@ export default {
         'primary-hover': '#3f8de0',
         'secondary-select': '#F64A4A',
         'secondary-hover': '#FF5757',
+        'grad-default-white-from': '#FBFBFB',
+        'grad-default-white-to': '#F4F7FC',
       },
       keyframes: {
         scaleltor: {

@@ -3,6 +3,9 @@ const range = (size, startAt = 1) => {
 };
 
 export default {
+  // attributify: {
+  //   prefix: 'w:',
+  // },
   safelist: [
     range(101, 0).map((i) => {
       const sReturn = `w-[${i}%]`;
@@ -10,6 +13,7 @@ export default {
       return sReturn;
     }),
   ],
+  shortcuts: {},
   theme: {
     extend: {
       fontSize: {

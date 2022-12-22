@@ -2,11 +2,19 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import p000Login from '../../domain/p000-login';
 import p001Dashboard from '../../domain/p001-dashboard';
-import p002Menu from '../../domain/p002-menu';
+import p002ThreeJS from '../../domain/p002-threejs';
+import p003ImpactJS from '../../domain/p003-impactjs';
+import p004Menu from '../../domain/p004-menu';
 import RoutePrivate from '../component/atoms/route-private';
 import { useGlobalStorePersist } from '../store';
 
-const i18nList: any[] = [p000Login.I18N, p001Dashboard.I18N, p002Menu.I18N];
+const i18nList: any[] = [
+  p000Login.I18N,
+  p001Dashboard.I18N,
+  p002ThreeJS.I18N,
+  p003ImpactJS.I18N,
+  p004Menu.I18N,
+];
 
 const JSX = (props: any) => {
   const { userData }: any = useGlobalStorePersist(['userData']);
@@ -20,7 +28,23 @@ const JSX = (props: any) => {
           path="/dashboard"
           element={
             <RoutePrivate isAuth={userData}>
-              <p001Dashboard.JSX />{' '}
+              <p001Dashboard.JSX />
+            </RoutePrivate>
+          }
+        />
+        <Route
+          path="/threejs"
+          element={
+            <RoutePrivate isAuth={userData}>
+              <p002ThreeJS.JSX />
+            </RoutePrivate>
+          }
+        />
+        <Route
+          path="/impactjs"
+          element={
+            <RoutePrivate isAuth={userData}>
+              <p003ImpactJS.JSX />{' '}
             </RoutePrivate>
           }
         />
@@ -28,7 +52,7 @@ const JSX = (props: any) => {
           path="/menu"
           element={
             <RoutePrivate isAuth={userData}>
-              <p002Menu.JSX />
+              <p004Menu.JSX />
             </RoutePrivate>
           }
         />

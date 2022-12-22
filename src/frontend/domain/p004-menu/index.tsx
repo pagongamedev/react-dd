@@ -16,7 +16,7 @@ const JSX = () => {
   const { t } = useTranslation([i18nDomainName]);
 
   useEffect(() => {
-    setMenu(t('header'), 1);
+    setMenu(t('header'), 4);
   }, []);
   return (
     <Template.JSX>

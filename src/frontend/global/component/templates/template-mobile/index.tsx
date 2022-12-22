@@ -1,11 +1,12 @@
 import { BiCube, BiGame, BiHome, BiMenu } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
 
 import { useGlobalStore } from '../../../store';
+import LinkSafe from '../../atoms/link-safe';
 
 const JSX = (props: any) => {
   const { menu }: any = useGlobalStore(['menu']);
 
+  const defaultRoute = '/dashboard';
   return (
     <>
       <div className="HScreen m-0 bg-gradient-to-b from-grad-default-white-from to-grad-default-white-to">
@@ -15,42 +16,46 @@ const JSX = (props: any) => {
           </div>
           <div className="flex-1 flex flex-col overflow-clip">{props.children}</div>
           <div className="h-15 pb-0.5 bg-white w-full flex flex-row justify-around items-center px-5">
-            <Link
+            <LinkSafe
               className="flex justify-items-center"
-              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+              disabled={menu.iIconID === 1}
+              to="/dashboard"
             >
               <BiHome
                 className={menu.iIconID === 1 ? 'text-primary-select' : 'text-primary'}
                 size="2.3em"
               />
-            </Link>
-            <Link
+            </LinkSafe>
+            <LinkSafe
               className="flex justify-items-center"
-              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+              disabled={menu.iIconID === 1}
+              to="/threejs"
             >
               <BiCube
                 className={menu.iIconID === 2 ? 'text-primary-select' : 'text-primary'}
                 size="2.3em"
               />
-            </Link>
-            <Link
+            </LinkSafe>
+            <LinkSafe
               className="flex justify-items-center"
-              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+              disabled={menu.iIconID === 1}
+              to="/impactjs"
             >
               <BiGame
                 className={menu.iIconID === 3 ? 'text-primary-select' : 'text-primary'}
                 size="2.3em"
               />
-            </Link>
-            <Link
+            </LinkSafe>
+            <LinkSafe
               className="flex justify-items-center"
-              to={menu.iIconID === 1 ? '/dashboard' : '/menu'}
+              disabled={menu.iIconID === 1}
+              to="/menu"
             >
               <BiMenu
                 className={menu.iIconID === 4 ? 'text-primary-select' : 'text-primary'}
                 size="2.7em"
               />
-            </Link>
+            </LinkSafe>
           </div>
         </div>
       </div>

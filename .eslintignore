@@ -7,3 +7,6 @@ node_modules/*
 **/impact-js/*
 
 lib/
+
+analytics/*
+.secret/*

@@ -40,7 +40,7 @@ Create By Pagongamedev
 | Plugin             | eslint-plugin-prettier           |  4.2.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-react              | 7.31.11 |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-simple-import-sort |  8.0.0  |                                                        | Eslint Plugin           |
-
+| Plugin             | eslint-plugin-check-file         |  1.3.0  |                                                        | Eslint Plugin           |
 
 
 <br />
@@ -199,7 +199,8 @@ export default defineConfig({
 npm install --save i18next react-i18next
 ```
 
-### 4. [Optional] add https in vite.config.ts
+### 4. [Optional] More Setting
+add https in vite.config.ts
 
 ```javascript
 export default defineConfig({
@@ -212,6 +213,21 @@ export default defineConfig({
     },
   },
 });
+```
+
+if use firebase hosting add this for fix [refresh not found page]
+```json
+{
+  "hosting": {
+    ...
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+  }
+}
 ```
 
 ### 5. install Other library

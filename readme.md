@@ -22,7 +22,6 @@ Create By Pagongamedev
 | Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
 | Library   | universal-helper    |  0.0.4  | https://reactrouter.com/en/main                      | Helper for clean code |
 
-
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |
 | JavaScript Runtime | node                             | 19.0.0  | https://nodejs.org/en/download/current/                |                         |
@@ -43,6 +42,13 @@ Create By Pagongamedev
 | Plugin             | eslint-plugin-check-file         |  1.3.0  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-unicorn            | 45.0.2  |                                                        | Eslint Plugin           |
 
+| Stack Third Party | Name  | Version | Link                 | Note            |
+| ----------------- | ----- | :-----: | -------------------- | --------------- |
+| Framework         | three | 0.148.0 | https://threejs.org/ | WebGL Framework |
+
+| Stack Dev Third Party | Name         | Version | Link | Note |
+| --------------------- | ------------ | :-----: | ---- | ---- |
+| Types                 | @types/three |   146   |      | Type |
 
 <br />
 

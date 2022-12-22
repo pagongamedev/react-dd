@@ -6,6 +6,7 @@ import {
   FirebaseSignInWithEmailAndPassword,
   FirebaseSignOut,
 } from '../../../core/middleware/firebase';
+import { GameCore } from '../../../interactive/domain/three-js';
 
 export const storePersist = create(
   persist(
@@ -26,6 +27,7 @@ export const useGlobalStorePersist = (stateList: string[], isShallow?: boolean) 
 };
 
 export const store = create((setState, getState) => ({
+  gameCore: new GameCore(),
   isLoading: false,
   setLoading: (isLoading: boolean) => {
     setState({ isLoading });

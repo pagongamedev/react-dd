@@ -191,13 +191,12 @@ const JSX = () => {
                 </button>
               </div>
             </form>
-            {/* <div className="mt-5 text-xl grid grid-cols-2">
+            <div className="mt-5 text-xl grid grid-cols-2">
               <div>User : {testUser}</div>
               <div>Password : {testPassword}</div>
-            </div> */}
+            </div>
           </div>
         </div>
-        {/* </div> */}
       </div>
     </div>
   );

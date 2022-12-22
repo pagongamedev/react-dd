@@ -2,10 +2,10 @@ import { helperZustand } from 'universal-helper';
 import create from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import {
-  FirebaseSignInWithEmailAndPassword,
-  FirebaseSignOut,
-} from '../../../core/middleware/firebase';
+// import {
+//   FirebaseSignInWithEmailAndPassword,
+//   FirebaseSignOut,
+// } from '../../../core/middleware/firebase';
 import { GameCore } from '../../../interactive/domain/three-js';
 
 export const storePersist = create(
@@ -40,35 +40,35 @@ export const store = create((setState, getState) => ({
   // setUser: (name: string) => setState(() => ({ user: name })),
   setMenu: (sHeaderName: string, iIconID: number) =>
     setState(() => ({ menu: { sHeaderName, iIconID } })),
-  signIn: async (
-    sEmail: string,
-    sPassword: string,
-  ): Promise<{ res: any; error: Error | null }> => {
-    setState({ isLoading: true });
-    const resAuth = await FirebaseSignInWithEmailAndPassword(sEmail, sPassword);
+  // signIn: async (
+  //   sEmail: string,
+  //   sPassword: string,
+  // ): Promise<{ res: any; error: Error | null }> => {
+  //   setState({ isLoading: true });
+  //   const resAuth = await FirebaseSignInWithEmailAndPassword(sEmail, sPassword);
 
-    if (resAuth.error) {
-      setState({ isLoading: false });
-      return { res: null, error: resAuth.error };
-    }
+  //   if (resAuth.error) {
+  //     setState({ isLoading: false });
+  //     return { res: null, error: resAuth.error };
+  //   }
 
-    // console.log('resAuth.res ', resAuth.res);
+  //   // console.log('resAuth.res ', resAuth.res);
 
-    // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
-    const { setUserData }: any = storePersist.getState();
-    setUserData(resAuth.res);
-    setState({ isLoading: false });
-    return { res: resAuth.res, error: null };
-    // isLoading
-  },
-  signOut: async () => {
-    setState({ isLoading: true });
-    await FirebaseSignOut();
-    // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
-    const { setUserData }: any = storePersist.getState();
-    setUserData(null);
-    setState({ isLoading: false });
-  },
+  //   // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
+  //   const { setUserData }: any = storePersist.getState();
+  //   setUserData(resAuth.res);
+  //   setState({ isLoading: false });
+  //   return { res: resAuth.res, error: null };
+  //   // isLoading
+  // },
+  // signOut: async () => {
+  //   setState({ isLoading: true });
+  //   await FirebaseSignOut();
+  //   // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
+  //   const { setUserData }: any = storePersist.getState();
+  //   setUserData(null);
+  //   setState({ isLoading: false });
+  // },
 }));
 
 export const useGlobalStore = (stateList: string[], isShallow?: boolean) => {

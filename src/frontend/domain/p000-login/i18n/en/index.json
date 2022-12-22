@@ -10,6 +10,8 @@
     },
     "validate": {
         "required": "please filling space",
+        "min_one": "please fill more than {{count}} character.",
+        "min_other": "please fill more than {{count}} characters.",
         "userNotFound": "uset not found",
         "passwordWrong": "wrong password"
     }

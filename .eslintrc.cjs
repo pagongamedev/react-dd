@@ -33,12 +33,12 @@ module.exports = {
   ],
   plugins: ['simple-import-sort', 'prettier', 'check-file'],
   rules: {
-    'check-file/folder-naming-convention': [
-      'error',
-      {
-        'src/**/': 'SNAKE_CASE',
-      },
-    ],
+    // 'check-file/folder-naming-convention': [
+    //   'error',
+    //   {
+    //     'src/**/': 'SNAKE_CASE',
+    //   },
+    // ],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'off',

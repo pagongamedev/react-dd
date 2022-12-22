@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { RiEyeLine, RiEyeOffLine, RiLockLine, RiUserLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
-import { helperTime } from 'universal-helper';
+import { helperI18Next, helperTime } from 'universal-helper';
 import * as yup from 'yup';
 
 import { useGlobalStore, useGlobalStorePersist } from '../../global/store';
@@ -18,13 +18,16 @@ const testPassword = 'testtest1234';
 const i18nDomainName = 'login';
 const I18N = initI18N({ name: i18nDomainName });
 
+const schema = yup.object({
+  username: yup.string().required('validate.required'),
+  password: yup
+    .string()
+    .required('validate.required')
+    .min(4, { key: 'validate.min', option: { count: 4 } }),
+});
+
 const JSX = () => {
   const { t, i18n } = useTranslation([i18nDomainName]);
-
-  const schema = yup.object({
-    username: yup.string().required('validate.required'),
-    password: yup.string().required('validate.required'),
-  });
 
   const {
     register,
@@ -129,7 +132,7 @@ const JSX = () => {
                 </div>
                 {errors.username && (
                   <div className="h-5 mt-2 text-left text-red-500">
-                    {t(errors.username.message as string)}
+                    {helperI18Next.MappingObject(errors.username.message, t)}
                   </div>
                 )}
                 <div
@@ -172,7 +175,7 @@ const JSX = () => {
                 </div>
                 {errors.password && (
                   <div className="h-5 mt-2 text-left text-red-500">
-                    {t(errors.password.message as string)}
+                    {helperI18Next.MappingObject(errors.password.message, t)}
                   </div>
                 )}{' '}
                 <button
@@ -188,10 +191,10 @@ const JSX = () => {
                 </button>
               </div>
             </form>
-            <div className="mt-5 text-xl grid grid-cols-2">
+            {/* <div className="mt-5 text-xl grid grid-cols-2">
               <div>User : {testUser}</div>
               <div>Password : {testPassword}</div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* </div> */}

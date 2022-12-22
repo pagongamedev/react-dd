@@ -30,7 +30,7 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.5",
     "react-spinners-kit": "^1.9.1",
-    "universal-helper": "^0.0.5",
+    "universal-helper": "^0.0.6",
     "yup": "^0.32.11",
     "zustand": "^4.1.5"
   },

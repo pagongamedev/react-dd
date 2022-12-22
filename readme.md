@@ -31,7 +31,7 @@ Create By Pagongamedev
 | Plugin             | vite-plugin-windicss             | 1.8.10  | https://windicss.org/integrations/vite.html            | CSS                     |
 | Plugin             | rollup-plugin-visualizer         |  5.8.3  | https://www.npmjs.com/package/rollup-plugin-visualizer | Visualizer              |
 | Library            | prettier                         |  2.8.1  | https://prettier.io/docs/en/configuration.html         | Format Document Rule    |
-| Library            | eslint                           | 8.29.0  | https://eslint.org/docs/latest/user-guide/configuring/ | Format Document Rule    |
+| Library            | eslint                           | 8.30.0  | https://eslint.org/docs/latest/user-guide/configuring/ | Format Document Rule    |
 | Plugin             | @typescript-eslint/eslint-plugin | 5.46.1  |                                                        | Eslint Plugin           |
 | Plugin             | @typescript-eslint/parser        | 5.46.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-config-prettier           |  8.5.0  |                                                        | Eslint Plugin           |
@@ -41,6 +41,7 @@ Create By Pagongamedev
 | Plugin             | eslint-plugin-react              | 7.31.11 |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-simple-import-sort |  8.0.0  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-check-file         |  1.3.0  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-unicorn            | 45.0.2  |                                                        | Eslint Plugin           |
 
 
 <br />

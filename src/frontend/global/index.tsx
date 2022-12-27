@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import './index.css';
+import './font.css';
 
 import React from 'react';
 import { ReactNode } from 'react';

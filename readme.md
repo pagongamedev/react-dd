@@ -42,11 +42,11 @@ Create By Pagongamedev
 | Plugin             | eslint-plugin-check-file         |  1.3.0  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-unicorn            | 45.0.2  |                                                        | Eslint Plugin           |
 
-| Stack Third Party | Name  | Version | Link                 | Note            |
+| Interactive Stack | Name  | Version | Link                 | Note            |
 | ----------------- | ----- | :-----: | -------------------- | --------------- |
 | Framework         | three | 0.148.0 | https://threejs.org/ | WebGL Framework |
 
-| Stack Dev Third Party | Name         | Version | Link | Note |
+| Interactive Stack Dev | Name         | Version | Link | Note |
 | --------------------- | ------------ | :-----: | ---- | ---- |
 | Types                 | @types/three |   146   |      | Type |
 

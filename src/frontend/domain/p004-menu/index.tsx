@@ -4,15 +4,16 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Template from '../../global/component/templates/template-mobile';
-import { useStoreGlobal, useStoreGlobalPersist } from '../../global/store';
+import { getMethodStoreGlobal, getMethodStoreGlobalPersist } from '../../global/store';
 import initI18N from './i18n';
 // import
 const i18nDomainName = 'menu';
 const I18N = initI18N({ name: i18nDomainName });
 
 const JSX = () => {
-  const { setMenu }: any = useStoreGlobal(['setMenu']);
-  const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
+  const { setMenu } = getMethodStoreGlobal();
+  const { setUserData } = getMethodStoreGlobalPersist();
+
   const { t } = useTranslation([i18nDomainName]);
 
   useEffect(() => {

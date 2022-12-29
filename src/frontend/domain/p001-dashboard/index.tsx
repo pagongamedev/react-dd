@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import TemplateMobile from '../../global/component/templates/template-mobile';
-import { useStoreGlobal } from '../../global/store';
+import { getMethodStoreGlobal } from '../../global/store';
 import UIMock from './component/ui-mock';
 import initI18N from './i18n';
 
@@ -12,7 +12,7 @@ const i18nDomainName = 'dashboard';
 const I18N = initI18N({ name: i18nDomainName });
 
 const JSX = () => {
-  const { setMenu }: any = useStoreGlobal(['setMenu']);
+  const { setMenu } = getMethodStoreGlobal();
   const { t, i18n } = useTranslation([i18nDomainName]);
 
   const onChangeLang = (lang: string) => {

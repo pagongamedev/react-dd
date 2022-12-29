@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { GameCore } from '../../../interactive/domain/three-js';
 // import { useTranslation } from 'react-i18next';
 import Template from '../../global/component/templates/template-mobile';
-import { useStoreGlobal } from '../../global/store';
+import { getMethodStoreGlobal, useStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import
 const i18nDomainName = 'threejs';
@@ -38,26 +38,37 @@ class GameThreeJS extends React.Component<
   };
 }
 
-const JSX = () => {
-  const { setMenu }: any = useStoreGlobal(['setMenu']);
+// For Re Renderer Only Score
+const JSXScore = () => {
   const { gameCore }: any = useStoreGlobal(['gameCore']);
-
-  // const { t } = useTranslation([i18nDomainName]);
   const [score, setScore] = useState<number>(0);
+  useEffect(() => {
+    gameCore.setCallbackSetScore(onClickScore);
+  }, []);
 
   const onClickScore = (score: number) => {
     setScore(score);
   };
 
+  return (
+    <div className="flex-none h-12 pb-0.5 w-full font-bold bg-primary-hover text-white my-auto text-center flex flex-row justify-center items-center gap-x-2 text-xl">
+      Score : {score}
+    </div>
+  );
+};
+
+const JSX = () => {
+  const { setMenu } = getMethodStoreGlobal();
+  const { gameCore }: any = useStoreGlobal(['gameCore']);
+
+  // const { t } = useTranslation([i18nDomainName]);
+
   useEffect(() => {
-    gameCore.setCallbackSetScore(onClickScore);
     setMenu('three.js', 2);
   }, []);
   return (
     <Template.JSX>
-      <div className="flex-none h-12 pb-0.5 w-full font-bold bg-primary-hover text-white my-auto text-center flex flex-row justify-center items-center gap-x-2 text-xl">
-        Score : {score}
-      </div>
+      <JSXScore />
       <GameThreeJS gameCore={gameCore} className="flex-auto bg-blue-200" />
     </Template.JSX>
   );

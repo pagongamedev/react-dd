@@ -31,7 +31,7 @@
     "react-router-dom": "^6.4.5",
     "react-spinners-kit": "^1.9.1",
     "three": "^0.148.0",
-    "universal-helper": "^0.0.6",
+    "universal-helper": "^0.0.7",
     "yup": "^0.32.11",
     "zustand": "^4.1.5"
   },

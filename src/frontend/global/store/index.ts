@@ -8,23 +8,22 @@ import { persist } from 'zustand/middleware';
 // } from '../../../core/middleware/firebase';
 import { GameCore } from '../../../interactive/domain/three-js';
 
-export type TypeStoreGlobalMethodPersist = {
-  setUserData: (userData: any) => void;
-};
+// export type TypeStoreGlobalMethodPersist = {
+//   setUserData: (userData: any) => void;
+// };
 
+// cant use method
 type TypeStoreGlobalPersist = {
   userData: any;
-  method: TypeStoreGlobalMethodPersist;
+  setUserData: (userData: any) => void;
 };
 
 export const storeGlobalPersist = create(
   persist(
     (setState: any, getState: any): TypeStoreGlobalPersist => ({
       userData: null,
-      method: {
-        setUserData: (userData: any) => {
-          setState({ userData });
-        },
+      setUserData: (userData: any) => {
+        setState({ userData });
       },
     }),
     {
@@ -37,9 +36,9 @@ export const useStoreGlobalPersist = (stateList: string[], isShallow?: boolean) 
   return helperZustand.StateMapping(stateList, storeGlobalPersist, isShallow);
 };
 
-export const getMethodStoreGlobalPersist = (): TypeStoreGlobalMethodPersist => {
-  return storeGlobalPersist.getState().method;
-};
+// export const getMethodStoreGlobalPersist = (): TypeStoreGlobalMethodPersist => {
+//   return storeGlobalPersist.getState().method;
+// };
 
 export type TypeMethodStoreGlobal = {
   setLoading: (isLoading: boolean) => void;

@@ -25,7 +25,7 @@ Create By Pagongamedev
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |
 | JavaScript Runtime | node                             | 19.0.0  | https://nodejs.org/en/download/current/                |                         |
-| Module Bundler     | viteJS                           |  4.0.0  | https://vitejs.dev/guide/Library                       |                         |
+| Module Bundler     | viteJS                           |  4.0.3  | https://vitejs.dev/guide/Library                       |                         |
 | Framework          | typescript                       |  4.9.3  | https://www.typescriptlang.org/                        | Installed by ViteJS     |
 | Plugin             | vite-plugin-windicss             | 1.8.10  | https://windicss.org/integrations/vite.html            | CSS                     |
 | Plugin             | rollup-plugin-visualizer         |  5.8.3  | https://www.npmjs.com/package/rollup-plugin-visualizer | Visualizer              |
@@ -34,7 +34,7 @@ Create By Pagongamedev
 | Plugin             | @typescript-eslint/eslint-plugin | 5.46.1  |                                                        | Eslint Plugin           |
 | Plugin             | @typescript-eslint/parser        | 5.46.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-config-prettier           |  8.5.0  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-import             | 2.26.0  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-import             | 2.24.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-jsx-a11y           |  6.6.1  |                                                        | Eslint Plugin (Disable) |
 | Plugin             | eslint-plugin-prettier           |  4.2.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-react              | 7.31.11 |                                                        | Eslint Plugin           |

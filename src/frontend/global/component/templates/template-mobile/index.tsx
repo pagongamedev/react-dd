@@ -6,7 +6,7 @@ import LinkSafe from '../../atoms/link-safe';
 const JSX = (props: any) => {
   const { menu }: any = useStoreGlobal(['menu']);
 
-  const defaultRoute = '/dashboard';
+  const defaultRoute = '/user/dashboard';
   return (
     <>
       <div className="HScreen m-0 bg-gradient-to-b from-grad-default-white-from to-grad-default-white-to">
@@ -19,7 +19,7 @@ const JSX = (props: any) => {
             <LinkSafe
               className="flex justify-items-center"
               disabled={menu.iIconID === 1}
-              to="/dashboard"
+              to="/user/dashboard"
             >
               <BiHome
                 className={menu.iIconID === 1 ? 'text-primary-select' : 'text-primary'}
@@ -29,7 +29,7 @@ const JSX = (props: any) => {
             <LinkSafe
               className="flex justify-items-center"
               disabled={menu.iIconID === 1}
-              to="/threejs"
+              to="/user/threejs"
             >
               <BiCube
                 className={menu.iIconID === 2 ? 'text-primary-select' : 'text-primary'}
@@ -39,7 +39,7 @@ const JSX = (props: any) => {
             <LinkSafe
               className="flex justify-items-center"
               disabled={menu.iIconID === 1}
-              to="/impactjs"
+              to="/user/impactjs"
             >
               <BiGame
                 className={menu.iIconID === 3 ? 'text-primary-select' : 'text-primary'}
@@ -49,7 +49,7 @@ const JSX = (props: any) => {
             <LinkSafe
               className="flex justify-items-center"
               disabled={menu.iIconID === 1}
-              to="/menu"
+              to="/user/menu"
             >
               <BiMenu
                 className={menu.iIconID === 4 ? 'text-primary-select' : 'text-primary'}

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 
 import p000Login from '../../domain/p000-login';
 import p001Dashboard from '../../domain/p001-dashboard';
@@ -6,7 +6,7 @@ import p002ThreeJS from '../../domain/p002-threejs';
 import p003ImpactJS from '../../domain/p003-impactjs';
 import p004Menu from '../../domain/p004-menu';
 import RoutePrivate from '../component/atoms/route-private';
-import { useStoreGlobalPersist } from '../store';
+import { useStoreGlobalPersist } from '../store/persist';
 
 const i18nList: any[] = [
   p000Login.I18N,
@@ -22,40 +22,26 @@ const JSX = (props: any) => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<p000Login.JSX />} />
+        <Route
+          index
+          element={userData ? <Navigate replace to="/user" /> : <p000Login.JSX />}
+        />
         {/* <Route path="/" element={<p000Login.JSX />} /> */}
         <Route
-          path="/dashboard"
+          path="user"
           element={
             <RoutePrivate isAuth={userData}>
-              <p001Dashboard.JSX />
+              <Outlet />
             </RoutePrivate>
           }
-        />
-        <Route
-          path="/threejs"
-          element={
-            <RoutePrivate isAuth={userData}>
-              <p002ThreeJS.JSX />
-            </RoutePrivate>
-          }
-        />
-        <Route
-          path="/impactjs"
-          element={
-            <RoutePrivate isAuth={userData}>
-              <p003ImpactJS.JSX />{' '}
-            </RoutePrivate>
-          }
-        />
-        <Route
-          path="/menu"
-          element={
-            <RoutePrivate isAuth={userData}>
-              <p004Menu.JSX />
-            </RoutePrivate>
-          }
-        />
+        >
+          <Route index element={<Navigate replace to="dashboard" />} />
+          <Route path="dashboard" element={<p001Dashboard.JSX />} />
+          <Route path="threejs" element={<p002ThreeJS.JSX />} />
+          <Route path="impactjs" element={<p003ImpactJS.JSX />} />
+          <Route path="menu" element={<p004Menu.JSX />} />
+        </Route>
+        <Route path="*" element={<div>URLs Not Fount</div>} />
       </Routes>
     </BrowserRouter>
   );

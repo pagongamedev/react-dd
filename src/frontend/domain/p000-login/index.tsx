@@ -9,11 +9,8 @@ import { useNavigate } from 'react-router-dom';
 import { helperI18Next, helperTime } from 'universal-helper';
 import * as yup from 'yup';
 
-import {
-  getMethodStoreGlobal,
-  useStoreGlobal,
-  useStoreGlobalPersist,
-} from '../../global/store';
+import { getMethodStoreGlobal } from '../../global/store';
+import { getMethodStoreGlobalPersist } from '../../global/store/persist';
 import initI18N from './i18n';
 
 const testUser = 't@t.com';
@@ -41,7 +38,7 @@ const JSX = () => {
   } = useForm({ resolver: yupResolver(schema), mode: 'onChange' });
 
   const { setLoading } = getMethodStoreGlobal();
-  const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
+  const { setUserData } = getMethodStoreGlobalPersist();
 
   const navigate = useNavigate();
 
@@ -68,7 +65,7 @@ const JSX = () => {
 
     console.log('sign in');
     setUserData({});
-    navigate('/dashboard');
+    navigate('/user/dashboard');
   };
 
   const onSubmit = async (data: any) => {

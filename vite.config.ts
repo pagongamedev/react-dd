@@ -2,11 +2,12 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 import WindiCSS from 'vite-plugin-windicss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), WindiCSS()],
+  plugins: [react(), WindiCSS(), VitePWA()],
   resolve: {
     dedupe: ['react'],
   },

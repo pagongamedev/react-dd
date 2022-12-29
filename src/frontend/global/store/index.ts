@@ -13,7 +13,7 @@ type TypeStorePersist = {
   setUserData: (userData: any) => void;
 };
 
-export const storePersist = create(
+export const storeGlobalPersist = create(
   persist(
     (setState: any, getState: any): TypeStorePersist => ({
       userData: null,
@@ -28,10 +28,10 @@ export const storePersist = create(
 );
 
 export const useStoreGlobalPersist = (stateList: string[], isShallow?: boolean) => {
-  return helperZustand.StateMapping(stateList, storePersist, isShallow);
+  return helperZustand.StateMapping(stateList, storeGlobalPersist, isShallow);
 };
 
-type TypeStore = {
+type TypeStoreGlobal = {
   gameCore: GameCore;
   isLoading: boolean;
   setLoading: (isLoading: boolean) => void;
@@ -44,8 +44,8 @@ type TypeStore = {
   // signOut: () => void;
 };
 
-export const store = create(
-  (setState: any, getState: any): TypeStore => ({
+export const storeGlobal = create(
+  (setState: any, getState: any): TypeStoreGlobal => ({
     gameCore: new GameCore(),
     isLoading: false,
     setLoading: (isLoading: boolean) => {
@@ -92,7 +92,7 @@ export const store = create(
 );
 
 export const useStoreGlobal = (stateList: string[], isShallow?: boolean) => {
-  return helperZustand.StateMapping(stateList, store, isShallow);
+  return helperZustand.StateMapping(stateList, storeGlobal, isShallow);
 };
 
-export const setStoreGlobal = (prop: any) => store.setState(prop);
+export const setStoreGlobal = (prop: any) => storeGlobal.setState(prop);

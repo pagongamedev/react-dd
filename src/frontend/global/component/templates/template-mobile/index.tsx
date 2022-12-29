@@ -1,10 +1,10 @@
 import { BiCube, BiGame, BiHome, BiMenu } from 'react-icons/bi';
 
-import { useGlobalStore } from '../../../store';
+import { useStoreGlobal } from '../../../store';
 import LinkSafe from '../../atoms/link-safe';
 
 const JSX = (props: any) => {
-  const { menu }: any = useGlobalStore(['menu']);
+  const { menu }: any = useStoreGlobal(['menu']);
 
   const defaultRoute = '/dashboard';
   return (

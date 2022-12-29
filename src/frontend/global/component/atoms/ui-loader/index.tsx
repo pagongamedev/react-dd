@@ -2,10 +2,10 @@ import './index.css';
 
 import { RotateSpinner } from 'react-spinners-kit';
 
-import { useGlobalStore } from '../../../store';
+import { useStoreGlobal } from '../../../store';
 
 const JSX = (props: any) => {
-  const { isLoading }: any = useGlobalStore(['isLoading']);
+  const { isLoading }: any = useStoreGlobal(['isLoading']);
   if (isLoading) {
     return (
       <>

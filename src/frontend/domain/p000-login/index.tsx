@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { helperI18Next, helperTime } from 'universal-helper';
 import * as yup from 'yup';
 
-import { useGlobalStore, useGlobalStorePersist } from '../../global/store';
+import { useStoreGlobal, useStoreGlobalPersist } from '../../global/store';
 import initI18N from './i18n';
 
 const testUser = 't@t.com';
@@ -36,8 +36,8 @@ const JSX = () => {
     formState: { errors, isDirty, isValid },
   } = useForm({ resolver: yupResolver(schema), mode: 'onChange' });
 
-  const { setLoading }: any = useGlobalStore(['setLoading']);
-  const { setUserData }: any = useGlobalStorePersist(['setUserData']);
+  const { setLoading }: any = useStoreGlobal(['setLoading']);
+  const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
 
   const navigate = useNavigate();
 

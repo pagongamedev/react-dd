@@ -10,7 +10,7 @@ import { GameCore } from '../../../interactive/domain/three-js';
 
 export const storePersist = create(
   persist(
-    (setState, getState) => ({
+    (setState: any, getState: any) => ({
       userData: null,
       setUserData: (userData: any) => {
         setState({ userData });
@@ -22,11 +22,11 @@ export const storePersist = create(
   ),
 );
 
-export const useGlobalStorePersist = (stateList: string[], isShallow?: boolean) => {
+export const useStoreGlobalPersist = (stateList: string[], isShallow?: boolean) => {
   return helperZustand.StateMapping(stateList, storePersist, isShallow);
 };
 
-export const store = create((setState, getState) => ({
+export const store = create((setState: any, getState: any) => ({
   gameCore: new GameCore(),
   isLoading: false,
   setLoading: (isLoading: boolean) => {
@@ -54,7 +54,7 @@ export const store = create((setState, getState) => ({
 
   //   // console.log('resAuth.res ', resAuth.res);
 
-  //   // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
+  //   // const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
   //   const { setUserData }: any = storePersist.getState();
   //   setUserData(resAuth.res);
   //   setState({ isLoading: false });
@@ -64,15 +64,15 @@ export const store = create((setState, getState) => ({
   // signOut: async () => {
   //   setState({ isLoading: true });
   //   await FirebaseSignOut();
-  //   // const { setUserData }: any = useGlobalStorePersist(['setUserData']);
+  //   // const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
   //   const { setUserData }: any = storePersist.getState();
   //   setUserData(null);
   //   setState({ isLoading: false });
   // },
 }));
 
-export const useGlobalStore = (stateList: string[], isShallow?: boolean) => {
+export const useStoreGlobal = (stateList: string[], isShallow?: boolean) => {
   return helperZustand.StateMapping(stateList, store, isShallow);
 };
 
-export const setGlobalStore = (prop: any) => store.setState(prop);
+export const setStoreGlobal = (prop: any) => store.setState(prop);

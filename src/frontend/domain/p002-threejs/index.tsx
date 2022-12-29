@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { GameCore } from '../../../interactive/domain/three-js';
 // import { useTranslation } from 'react-i18next';
 import Template from '../../global/component/templates/template-mobile';
-import { useGlobalStore } from '../../global/store';
+import { useStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import
 const i18nDomainName = 'threejs';
@@ -39,8 +39,8 @@ class GameThreeJS extends React.Component<
 }
 
 const JSX = () => {
-  const { setMenu }: any = useGlobalStore(['setMenu']);
-  const { gameCore }: any = useGlobalStore(['gameCore']);
+  const { setMenu }: any = useStoreGlobal(['setMenu']);
+  const { gameCore }: any = useStoreGlobal(['gameCore']);
 
   // const { t } = useTranslation([i18nDomainName]);
   const [score, setScore] = useState<number>(0);

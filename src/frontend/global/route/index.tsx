@@ -6,7 +6,7 @@ import p002ThreeJS from '../../domain/p002-threejs';
 import p003ImpactJS from '../../domain/p003-impactjs';
 import p004Menu from '../../domain/p004-menu';
 import RoutePrivate from '../component/atoms/route-private';
-import { useGlobalStorePersist } from '../store';
+import { useStoreGlobalPersist } from '../store';
 
 const i18nList: any[] = [
   p000Login.I18N,
@@ -17,7 +17,7 @@ const i18nList: any[] = [
 ];
 
 const JSX = (props: any) => {
-  const { userData }: any = useGlobalStorePersist(['userData']);
+  const { userData }: any = useStoreGlobalPersist(['userData']);
 
   return (
     <BrowserRouter>

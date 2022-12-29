@@ -8,7 +8,7 @@ import scriptImport from '../../global/component/atoms/script-import';
 // import script2 from '../../../../lib/game/main.js';
 // import { useTranslation } from 'react-i18next';
 import Template from '../../global/component/templates/template-mobile';
-import { useGlobalStore } from '../../global/store';
+import { useStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import * from '../../../../src/interactive/domain/impact-js/'
 // import
@@ -22,7 +22,7 @@ const script1 = document.createElement('script');
 const script2 = document.createElement('script');
 
 const JSX = () => {
-  const { setMenu }: any = useGlobalStore(['setMenu']);
+  const { setMenu }: any = useStoreGlobal(['setMenu']);
   // const { t } = useTranslation([i18nDomainName]);
   // scriptImport('lib/impact/impact.js');
   // scriptImport('lib/game/main.js');

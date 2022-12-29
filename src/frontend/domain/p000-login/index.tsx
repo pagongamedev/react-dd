@@ -17,7 +17,7 @@ const testUser = 't@t.com';
 const testPassword = 'testtest1234';
 
 const i18nDomainName = 'login';
-const I18N = initI18N({ name: i18nDomainName });
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
 
 const schema = yup.object({
   username: yup.string().required('validate.required'),

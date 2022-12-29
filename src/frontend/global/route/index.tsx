@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
+import { helperI18Next } from 'universal-helper';
 
 import p000Login from '../../domain/p000-login';
 import p001Dashboard from '../../domain/p001-dashboard';
@@ -8,7 +9,7 @@ import p004Menu from '../../domain/p004-menu';
 import RoutePrivate from '../component/atoms/route-private';
 import { useStoreGlobalPersist } from '../store/persist';
 
-const i18nList: any[] = [
+const i18nList: helperI18Next.TypeI18NDomain[] = [
   p000Login.I18N,
   p001Dashboard.I18N,
   p002ThreeJS.I18N,

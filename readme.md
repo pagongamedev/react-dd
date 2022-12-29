@@ -20,7 +20,7 @@ Create By Pagongamedev
 | Library   | chart.js            |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart                 |
 | Library   | react-chartjs-2     |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
 | Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
-| Library   | universal-helper    |  0.0.7  | https://reactrouter.com/en/main                      | Helper for clean code |
+| Library   | universal-helper    |  0.0.9  | https://reactrouter.com/en/main                      | Helper for clean code |
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |
@@ -34,7 +34,7 @@ Create By Pagongamedev
 | Plugin             | @typescript-eslint/eslint-plugin | 5.46.1  |                                                        | Eslint Plugin           |
 | Plugin             | @typescript-eslint/parser        | 5.46.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-config-prettier           |  8.5.0  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-import             | 2.24.1  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-import             | 2.60.0  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-jsx-a11y           |  6.6.1  |                                                        | Eslint Plugin (Disable) |
 | Plugin             | eslint-plugin-prettier           |  4.2.1  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-react              | 7.31.11 |                                                        | Eslint Plugin           |

@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { helperI18Next } from 'universal-helper';
 
 import TemplateMobile from '../../global/component/templates/template-mobile';
 import { getMethodStoreGlobal } from '../../global/store';
@@ -9,7 +10,7 @@ import UIMock from './component/ui-mock';
 import initI18N from './i18n';
 
 const i18nDomainName = 'dashboard';
-const I18N = initI18N({ name: i18nDomainName });
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
 
 const JSX = () => {
   const { setMenu } = getMethodStoreGlobal();

@@ -11,7 +11,6 @@ import * as yup from 'yup';
 
 import {
   getMethodStoreGlobal,
-  getMethodStoreGlobalPersist,
   useStoreGlobal,
   useStoreGlobalPersist,
 } from '../../global/store';
@@ -42,7 +41,7 @@ const JSX = () => {
   } = useForm({ resolver: yupResolver(schema), mode: 'onChange' });
 
   const { setLoading } = getMethodStoreGlobal();
-  const { setUserData } = getMethodStoreGlobalPersist();
+  const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
 
   const navigate = useNavigate();
 

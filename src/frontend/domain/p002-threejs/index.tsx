@@ -5,7 +5,6 @@ import { helperI18Next } from 'universal-helper';
 
 import { GameCore } from '../../../interactive/domain/three-js';
 // import { useTranslation } from 'react-i18next';
-import Template from '../../global/component/templates/template-mobile';
 import { getMethodStoreGlobal, useStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import
@@ -68,10 +67,10 @@ const JSX = () => {
     setMenu('three.js', 2);
   }, []);
   return (
-    <Template.JSX>
+    <>
       <JSXScore />
       <GameThreeJS gameCore={gameCore} className="flex-auto bg-blue-200" />
-    </Template.JSX>
+    </>
   );
 };
 

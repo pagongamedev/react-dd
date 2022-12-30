@@ -7,6 +7,7 @@ import p002ThreeJS from '../../domain/p002-threejs';
 import p003ImpactJS from '../../domain/p003-impactjs';
 import p004Menu from '../../domain/p004-menu';
 import RoutePrivate from '../component/atoms/route-private';
+import TemplateMobile from '../component/templates/template-mobile';
 import { useStoreGlobalPersist } from '../store/persist';
 
 const i18nList: helperI18Next.TypeI18NDomain[] = [
@@ -32,7 +33,9 @@ const JSX = (props: any) => {
           path="user"
           element={
             <RoutePrivate isAuth={userData}>
-              <Outlet />
+              <TemplateMobile.JSX>
+                <Outlet />
+              </TemplateMobile.JSX>
             </RoutePrivate>
           }
         >

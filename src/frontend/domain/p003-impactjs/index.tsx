@@ -8,7 +8,6 @@ import scriptImport from '../../global/component/atoms/script-import';
 // import script1 from '../../../../lib/game';
 // import script2 from '../../../../lib/game/main.js';
 // import { useTranslation } from 'react-i18next';
-import Template from '../../global/component/templates/template-mobile';
 import { getMethodStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import * from '../../../../src/interactive/domain/impact-js/'
@@ -64,14 +63,12 @@ const JSX = () => {
   }, []);
 
   return (
-    <Template.JSX>
-      <div
-        className="flex-auto"
-        ref={(mount) => {
-          mount?.append(canvasGame);
-        }}
-      ></div>
-    </Template.JSX>
+    <div
+      className="flex-auto"
+      ref={(mount) => {
+        mount?.append(canvasGame);
+      }}
+    />
   );
 };
 

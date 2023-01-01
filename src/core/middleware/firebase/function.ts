@@ -10,7 +10,7 @@ let functions: Functions;
 export const FuncionsInit = (app: FirebaseApp, region?: string) => {
   functions = getFunctions(app, region);
 };
-export const CallFunction = (sFunctionName: string) => {
+const CallFunction = (sFunctionName: string) => {
   return httpsCallable(functions, sFunctionName);
 };
 

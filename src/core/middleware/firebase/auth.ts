@@ -7,13 +7,15 @@ export const AuthInit = (app: FirebaseApp) => {
   auth = getAuth(app);
 };
 
-export const SignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
+const GetCurrentUser = () => auth.currentUser;
+
+const SignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
   return helperPromise.GolangResponse(
     signInWithEmailAndPassword(auth, sEmail, sPassword),
   );
 };
 
-export const SignOut = () => {
+const SignOut = () => {
   return signOut(auth);
 };
 
@@ -27,4 +29,4 @@ export const SignOut = () => {
 //   }
 // });
 
-export default { SignInWithEmailAndPassword, SignOut };
+export default { GetCurrentUser, SignInWithEmailAndPassword, SignOut };

@@ -6,7 +6,7 @@ export const RealtimeDatabaseInit = (app: FirebaseApp) => {
   db = getDatabase(app);
 };
 
-export const Subscribe = (topic: string, callback?: any) => {
+const Subscribe = (topic: string, callback?: any) => {
   const refTopic = ref(db, topic);
   onValue(refTopic, (snapshot: DataSnapshot) => {
     const data = snapshot.val();

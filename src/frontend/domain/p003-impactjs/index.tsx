@@ -12,8 +12,8 @@ import { getMethodStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import * from '../../../../src/interactive/domain/impact-js/'
 // import
-const i18nDomainName = 'impactjs';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
+const sI18nDomainName = 'impactjs';
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const canvasGame = document.createElement('canvas');
 canvasGame.id = 'canvas';
@@ -22,9 +22,9 @@ const script1 = document.createElement('script');
 const script2 = document.createElement('script');
 
 const JSX = () => {
-  const { setMenu } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
 
-  // const { t } = useTranslation([i18nDomainName]);
+  // const { t } = useTranslation([sI18nDomainName]);
   // scriptImport('lib/impact/impact.js');
   // scriptImport('lib/game/main.js');
 
@@ -46,6 +46,7 @@ const JSX = () => {
   };
 
   useEffect(() => {
+    setI18NDomainName(sI18nDomainName);
     setMenu('impact.js', 3);
     loadScript();
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

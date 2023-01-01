@@ -8,8 +8,8 @@ import { GameCore } from '../../../interactive/domain/three-js';
 import { getMethodStoreGlobal, useStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import
-const i18nDomainName = 'threejs';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
+const sI18nDomainName = 'threejs';
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 class GameThreeJS extends React.Component<
   { gameCore: any; className?: string | undefined },
@@ -58,12 +58,13 @@ const JSXScore = () => {
 };
 
 const JSX = () => {
-  const { setMenu } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
   const { gameCore }: any = useStoreGlobal(['gameCore']);
 
-  // const { t } = useTranslation([i18nDomainName]);
+  // const { t } = useTranslation([sI18nDomainName]);
 
   useEffect(() => {
+    setI18NDomainName(sI18nDomainName);
     setMenu('three.js', 2);
   }, []);
   return (

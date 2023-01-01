@@ -16,8 +16,8 @@ import initI18N from './i18n';
 const testUser = 't@t.com';
 const testPassword = 'testtest1234';
 
-const i18nDomainName = 'login';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
+const sI18nDomainName = 'login';
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const schema = yup.object({
   username: yup.string().required('validate.required'),
@@ -28,7 +28,7 @@ const schema = yup.object({
 });
 
 const JSX = () => {
-  const { t, i18n } = useTranslation([i18nDomainName]);
+  const { t, i18n } = useTranslation([sI18nDomainName]);
 
   const {
     register,

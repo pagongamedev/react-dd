@@ -8,16 +8,17 @@ import { getMethodStoreGlobal } from '../../global/store';
 import { getMethodStoreGlobalPersist } from '../../global/store/persist';
 import initI18N from './i18n';
 // import
-const i18nDomainName = 'menu';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
+const sI18nDomainName = 'menu';
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const JSX = () => {
-  const { setMenu } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
   const { setUserData } = getMethodStoreGlobalPersist();
 
-  const { t } = useTranslation([i18nDomainName]);
+  const { t } = useTranslation([sI18nDomainName]);
 
   useEffect(() => {
+    setI18NDomainName(sI18nDomainName);
     setMenu(t('header'), 4);
   }, []);
   return (

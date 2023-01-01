@@ -8,54 +8,33 @@ import { getMethodStoreGlobal } from '../../global/store';
 import UIMock from './component/ui-mock';
 import initI18N from './i18n';
 
-const i18nDomainName = 'dashboard';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: i18nDomainName });
+const sI18nDomainName = 'dashboard';
+const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const JSX = () => {
-  const { setMenu } = getMethodStoreGlobal();
-  const { t, i18n } = useTranslation([i18nDomainName]);
+  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
+  const { t } = useTranslation([sI18nDomainName]);
 
-  const onChangeLang = (lang: string) => {
-    i18n.changeLanguage(lang);
-    setMenu(t('header'), 0);
-  };
   useEffect(() => {
+    setI18NDomainName(sI18nDomainName);
     setMenu(t('header'), 0);
   }, []);
   return (
     <>
-      <div className="h-12 pb-0.5 w-full font-bold bg-primary-hover text-white my-auto text-center flex flex-row justify-center items-center gap-x-2 text-xl">
-        <input
-          type="radio"
-          name="EN"
-          value="en"
-          checked={i18n.language === 'en'}
-          onChange={() => onChangeLang('en')}
-        />
-        EN
-        <input
-          type="radio"
-          name="TH"
-          value="th"
-          checked={i18n.language === 'th'}
-          onChange={() => onChangeLang('th')}
-        />
-        TH
-      </div>
       <div className="flex-1 overflow-x-auto">
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
-        <UIMock.JSX />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
       </div>
     </>
   );

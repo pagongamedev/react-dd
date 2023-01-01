@@ -23,11 +23,20 @@ export const storeGlobalPersist = create(
 
 export type TypeMethodStoreGlobalPersist = {
   setUserData: (userData: any) => void;
+  updateUserData: (payload: any) => void;
 };
 
-const methodStoreGlobalPersist = {
+const methodStoreGlobalPersist: TypeMethodStoreGlobalPersist = {
   setUserData: (userData: any) => {
-    storeGlobalPersist.setState((state: TypeStoreGlobalPersist) => ({ userData }));
+    storeGlobalPersist.setState({ userData });
+  },
+  updateUserData: (payload: any) => {
+    storeGlobalPersist.setState((state: TypeStoreGlobalPersist) => ({
+      userData: {
+        ...state.userData,
+        payload,
+      },
+    }));
   },
 };
 
@@ -41,4 +50,5 @@ export const getMethodStoreGlobalPersist = (): TypeMethodStoreGlobalPersist => {
   return methodStoreGlobalPersist;
 };
 
+export const getStoreGlobalPersist = () => storeGlobalPersist.getState();
 export const setGlobalStorePersist = (prop: any) => storeGlobalPersist.setState(prop);

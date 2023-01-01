@@ -16,6 +16,7 @@ import { GameCore } from '../../../interactive/domain/three-js';
 type TypeStoreGlobal = {
   gameCore: GameCore;
   isLoading: boolean;
+  sI18NDomainName: string;
   menu: {
     sHeaderName: string;
     iIconID: number;
@@ -26,7 +27,7 @@ export const storeGlobal = create(
   (): TypeStoreGlobal => ({
     gameCore: new GameCore(),
     isLoading: false,
-
+    sI18NDomainName: '',
     menu: {
       sHeaderName: '',
       iIconID: 0,
@@ -38,16 +39,20 @@ export const storeGlobal = create(
 export type TypeMethodStoreGlobal = {
   setLoading: (isLoading: boolean) => void;
   setMenu: (sHeaderName: string, iIconID: number) => void;
+  setI18NDomainName: (sI18NDomainName: string) => void;
   // signIn: (sEmail: string, sPassword: string) => Promise<helperType.TypeGolangResponse>;
   // signOut: () => void;
 };
 
-export const methodStoreGlobal = {
+export const methodStoreGlobal: TypeMethodStoreGlobal = {
   setLoading: (isLoading: boolean) => {
     storeGlobal.setState((state: TypeStoreGlobal) => ({ isLoading }));
   },
   // user: '',
   // setUser: (name: string) => setState(() => ({ user: name })),
+  setI18NDomainName: (sI18NDomainName: string) => {
+    storeGlobal.setState({ sI18NDomainName });
+  },
   setMenu: (sHeaderName: string, iIconID: number) => {
     storeGlobal.setState((state: TypeStoreGlobal) => ({
       menu: { sHeaderName, iIconID },
@@ -94,4 +99,5 @@ export const getMethodStoreGlobal = (): TypeMethodStoreGlobal => {
   return methodStoreGlobal;
 };
 
+export const getStoreGlobal = () => storeGlobal.getState();
 export const setStoreGlobal = (prop: any) => storeGlobal.setState(prop);

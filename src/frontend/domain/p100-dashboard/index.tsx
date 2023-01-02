@@ -18,7 +18,7 @@ const JSX = () => {
   useEffect(() => {
     setI18NDomainName(sI18nDomainName);
     setMenuUIIsShow(true, true, true);
-    setMenu(t('header'), 0);
+    setMenu(t('header'), 1);
   }, []);
   return (
     <>

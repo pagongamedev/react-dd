@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { BiCube, BiGame, BiHome, BiMenu } from 'react-icons/bi';
+import { MdAddLocationAlt } from 'react-icons/md';
 
 import { getMethodStoreGlobal, getStoreGlobal, useStoreGlobal } from '../../../store';
 import LinkSafe from '../../atoms/link-safe';
@@ -84,21 +85,21 @@ const JSX = (props: any) => {
               <LinkSafe
                 className="flex justify-items-center"
                 disabled={menu.iIconID === 4}
-                to="/user/menu"
+                to="/user/threejsgo"
               >
-                <BiMenu
+                <MdAddLocationAlt
                   className={menu.iIconID === 4 ? 'text-primary-select' : 'text-primary'}
-                  size="2.7em"
+                  size="2.3em"
                 />
               </LinkSafe>
               <LinkSafe
                 className="flex justify-items-center"
                 disabled={menu.iIconID === 5}
-                to="/user/dashboard"
+                to="/user/menu"
               >
-                <BiHome
+                <BiMenu
                   className={menu.iIconID === 5 ? 'text-primary-select' : 'text-primary'}
-                  size="2.3em"
+                  size="2.7em"
                 />
               </LinkSafe>
             </div>

@@ -20,7 +20,7 @@ const JSX = () => {
   useEffect(() => {
     setI18NDomainName(sI18nDomainName);
     setMenuUIIsShow(true, true, true);
-    setMenu(t('header'), 4);
+    setMenu(t('header'), 5);
   }, []);
   return (
     <div className="flex-auto flex flex-col bg-light-700">

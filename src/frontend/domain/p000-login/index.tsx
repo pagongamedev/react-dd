@@ -20,7 +20,7 @@ const sI18nDomainName = 'login';
 const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const schema = yup.object({
-  username: yup.string().required('validate.required'),
+  username: yup.string().required('validate.required').email('validate.email'),
   password: yup
     .string()
     .required('validate.required')
@@ -51,6 +51,14 @@ const JSX = () => {
       setError('username', {
         type: 'custom',
         message: 'validate.userNotFound',
+      });
+      return;
+    }
+
+    if (sPassword == 'global') {
+      setError('global', {
+        type: 'custom',
+        message: 'validate.networkRequestFailed',
       });
       return;
     }
@@ -115,7 +123,7 @@ const JSX = () => {
               <div
                 className={
                   'rounded w-full bg-white border-1 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none ' +
-                  (errors.username ? 'border-2 border-red-500' : '')
+                  (errors.username || errors.global ? 'border-2 border-red-500' : '')
                 }
               >
                 <div className="py-0.5 divide-x-2 flex divide-gray-300 pr-2">
@@ -138,7 +146,7 @@ const JSX = () => {
               <div
                 className={
                   'mt-2 rounded w-full bg-white border-1 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none ' +
-                  (errors.password ? 'border-2 border-red-500' : '')
+                  (errors.password || errors.global ? 'border-2 border-red-500' : '')
                 }
               >
                 <div className="py-0.5 divide-x-2 flex divide-gray-300">
@@ -173,7 +181,12 @@ const JSX = () => {
                 <div className="h-5 mt-2 text-left text-red-500">
                   {helperI18Next.MappingObject(errors.password.message, t)}
                 </div>
-              )}{' '}
+              )}
+              {errors.global && (
+                <div className="h-5 mt-2 text-left text-red-500">
+                  {helperI18Next.MappingObject(errors.global.message, t)}
+                </div>
+              )}
               <button
                 disabled={!isDirty || !isValid}
                 type="submit"
@@ -190,6 +203,8 @@ const JSX = () => {
           <div className="mt-5 text-xl grid grid-cols-2">
             <div>User : {testUser}</div>
             <div>Password : {testPassword}</div>
+            <div>Test Globel Error</div>
+            <div>Password : global</div>
           </div>
         </div>
       </div>

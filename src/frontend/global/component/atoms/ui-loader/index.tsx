@@ -4,7 +4,7 @@ import { RotateSpinner } from 'react-spinners-kit';
 
 import { useStoreGlobal } from '../../../store';
 
-const JSX = (props: any) => {
+const UILoader = (props: any) => {
   const { isLoading }: any = useStoreGlobal(['isLoading']);
   if (isLoading) {
     return (
@@ -20,4 +20,4 @@ const JSX = (props: any) => {
   return <>{props.children}</>;
 };
 
-export default { JSX };
+export default UILoader;

@@ -18,9 +18,9 @@ class JSX extends React.Component<any, any> {
   render(): ReactNode {
     return (
       <div className="RSU">
-        <UILoader.JSX>
+        <UILoader>
           <Route.JSX />
-        </UILoader.JSX>
+        </UILoader>
       </div>
     );
   }

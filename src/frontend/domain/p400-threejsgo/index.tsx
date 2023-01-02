@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { helperI18Next } from 'universal-helper';
 
 import { getMethodStoreGlobal } from '../../global/store';
-import UIMock from './component/ui-mock';
+// import UIMock from './component/ui-mock';
 import initI18N from './i18n';
 
 const sI18nDomainName = 'threejsgo';

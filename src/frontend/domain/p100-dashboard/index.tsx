@@ -23,19 +23,19 @@ const JSX = () => {
   return (
     <>
       <div className="flex-1 overflow-x-auto">
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
-        <UIMock.JSX data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
+        <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
       </div>
     </>
   );

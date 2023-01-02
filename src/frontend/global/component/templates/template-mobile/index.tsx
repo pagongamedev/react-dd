@@ -5,7 +5,7 @@ import { MdAddLocationAlt } from 'react-icons/md';
 import { getMethodStoreGlobal, getStoreGlobal, useStoreGlobal } from '../../../store';
 import LinkSafe from '../../atoms/link-safe';
 
-const JSX = (props: any) => {
+const UITemplateMobile = (props: any) => {
   const { t, i18n } = useTranslation(['main']);
   const { sI18NDomainName } = getStoreGlobal();
 
@@ -110,4 +110,4 @@ const JSX = (props: any) => {
   );
 };
 
-export default { JSX };
+export default UITemplateMobile;

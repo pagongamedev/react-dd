@@ -35,9 +35,9 @@ const JSX = (props: any) => {
           path="user"
           element={
             <RoutePrivate isAuth={userData}>
-              <TemplateMobile.JSX>
+              <TemplateMobile>
                 <Outlet />
-              </TemplateMobile.JSX>
+              </TemplateMobile>
             </RoutePrivate>
           }
         >

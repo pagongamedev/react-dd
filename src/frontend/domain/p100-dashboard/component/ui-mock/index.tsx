@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-const JSX = (props: { data: any; sI18nDomainName: string }) => {
+const UIMock = (props: { data: any; sI18nDomainName: string }) => {
   const { t } = useTranslation([props.sI18nDomainName]);
   return (
     <div
@@ -15,4 +15,4 @@ const JSX = (props: { data: any; sI18nDomainName: string }) => {
   );
 };
 
-export default { JSX };
+export default UIMock;

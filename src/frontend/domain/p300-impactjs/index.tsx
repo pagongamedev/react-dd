@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { helperI18Next } from 'universal-helper';
 import { WaitForMilliSecond } from 'universal-helper/src/helper/time';
 
-import scriptImport from '../../global/component/atoms/script-import';
+// import scriptImport from '../../global/component/atoms/script-import';
 // import script1 from '../../../../lib/game';
 // import script2 from '../../../../lib/game/main.js';
 // import { useTranslation } from 'react-i18next';

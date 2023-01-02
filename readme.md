@@ -63,6 +63,7 @@ Create By Pagongamedev
 | Error Lens                       | https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens       | Easy for see error          |
 | ESLint                           | https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint     | Format Document Rule        |
 | Prettier - Code formatter        | https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode     | Format Document Rule        |
+| MS : Live Preview                | https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server      | Browser in VSCode           |
 
 <br />
 

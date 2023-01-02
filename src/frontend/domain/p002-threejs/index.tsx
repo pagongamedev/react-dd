@@ -58,13 +58,14 @@ const JSXScore = () => {
 };
 
 const JSX = () => {
-  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName, setMenuUIIsShow } = getMethodStoreGlobal();
   const { gameCore }: any = useStoreGlobal(['gameCore']);
 
   // const { t } = useTranslation([sI18nDomainName]);
 
   useEffect(() => {
     setI18NDomainName(sI18nDomainName);
+    setMenuUIIsShow(true, false, true);
     setMenu('three.js', 2);
   }, []);
   return (

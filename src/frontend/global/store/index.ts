@@ -21,6 +21,12 @@ type TypeStoreGlobal = {
     sHeaderName: string;
     iIconID: number;
   };
+  menuUIIsShow: {
+    isShowHeader: boolean;
+    isShowI18n: boolean;
+    isShowFooter: boolean;
+  };
+  count: number;
 };
 
 export const storeGlobal = create(
@@ -32,6 +38,12 @@ export const storeGlobal = create(
       sHeaderName: '',
       iIconID: 0,
     },
+    menuUIIsShow: {
+      isShowHeader: false,
+      isShowI18n: false,
+      isShowFooter: false,
+    },
+    count: 0,
   }),
 );
 
@@ -40,13 +52,21 @@ export type TypeMethodStoreGlobal = {
   setLoading: (isLoading: boolean) => void;
   setMenu: (sHeaderName: string, iIconID: number) => void;
   setI18NDomainName: (sI18NDomainName: string) => void;
+  setCountIncrease: () => void;
+  setCountDecrease: () => void;
+  setMenuUIIsShow: (
+    isShowHeader: boolean,
+    isShowI18n: boolean,
+    isShowFooter: boolean,
+  ) => void;
+
   // signIn: (sEmail: string, sPassword: string) => Promise<helperType.TypeGolangResponse>;
   // signOut: () => void;
 };
 
 export const methodStoreGlobal: TypeMethodStoreGlobal = {
   setLoading: (isLoading: boolean) => {
-    storeGlobal.setState((state: TypeStoreGlobal) => ({ isLoading }));
+    storeGlobal.setState({ isLoading });
   },
   // user: '',
   // setUser: (name: string) => setState(() => ({ user: name })),
@@ -54,10 +74,30 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
     storeGlobal.setState({ sI18NDomainName });
   },
   setMenu: (sHeaderName: string, iIconID: number) => {
-    storeGlobal.setState((state: TypeStoreGlobal) => ({
+    storeGlobal.setState({
       menu: { sHeaderName, iIconID },
+    });
+  },
+  setCountIncrease: () => {
+    storeGlobal.setState((state: TypeStoreGlobal) => ({
+      count: state.count + 1,
     }));
   },
+  setCountDecrease: () => {
+    storeGlobal.setState((state: TypeStoreGlobal) => ({
+      count: state.count - 1,
+    }));
+  },
+  setMenuUIIsShow: (
+    isShowHeader: boolean,
+    isShowI18n: boolean,
+    isShowFooter: boolean,
+  ) => {
+    storeGlobal.setState({
+      menuUIIsShow: { isShowHeader, isShowI18n, isShowFooter },
+    });
+  },
+
   // signIn: async (
   //   sEmail: string,
   //   sPassword: string,

@@ -12,11 +12,12 @@ const sI18nDomainName = 'dashboard';
 const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const JSX = () => {
-  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName, setMenuUIIsShow } = getMethodStoreGlobal();
   const { t } = useTranslation([sI18nDomainName]);
 
   useEffect(() => {
     setI18NDomainName(sI18nDomainName);
+    setMenuUIIsShow(true, true, true);
     setMenu(t('header'), 0);
   }, []);
   return (

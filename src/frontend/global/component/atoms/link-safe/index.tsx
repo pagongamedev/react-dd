@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-/* eslint-disable react/display-name */
-export default (props: {
+const LinkSafe = (props: {
   className?: string;
   to: string;
   disabled?: boolean;
@@ -15,3 +14,5 @@ export default (props: {
     </Link>
   );
 };
+
+export default LinkSafe;

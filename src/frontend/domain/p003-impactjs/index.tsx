@@ -22,7 +22,7 @@ const script1 = document.createElement('script');
 const script2 = document.createElement('script');
 
 const JSX = () => {
-  const { setMenu, setI18NDomainName } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName, setMenuUIIsShow } = getMethodStoreGlobal();
 
   // const { t } = useTranslation([sI18nDomainName]);
   // scriptImport('lib/impact/impact.js');
@@ -47,6 +47,7 @@ const JSX = () => {
 
   useEffect(() => {
     setI18NDomainName(sI18nDomainName);
+    setMenuUIIsShow(true, false, true);
     setMenu('impact.js', 3);
     loadScript();
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

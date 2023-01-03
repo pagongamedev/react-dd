@@ -41,6 +41,7 @@ Create By Pagongamedev
 | Plugin             | eslint-plugin-simple-import-sort |  8.0.0  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-check-file         |  1.3.0  |                                                        | Eslint Plugin           |
 | Plugin             | eslint-plugin-unicorn            | 45.0.2  |                                                        | Eslint Plugin           |
+| Plugin             | prettier-plugin-tailwindcss      |  0.2.1  |                                                        | Prettier Plugin         |
 | Library            | vite-plugin-pwa                  | 0.14.0  |                                                        | Eslint Plugin           |
 
 

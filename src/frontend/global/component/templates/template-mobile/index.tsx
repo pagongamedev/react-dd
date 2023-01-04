@@ -9,8 +9,8 @@ const UITemplateMobile = (props: any) => {
   const { t, i18n } = useTranslation(['main']);
   const { sI18NDomainName } = getStoreGlobal();
 
-  const { menu }: any = useStoreGlobal(['menu']);
-  const { menuUIIsShow }: any = useStoreGlobal(['menuUIIsShow']);
+  const { menu } = useStoreGlobal(['menu']);
+  const { menuUIIsShow } = useStoreGlobal(['menuUIIsShow']);
 
   const { setMenu } = getMethodStoreGlobal();
   const onChangeLang = (lang: string) => {
@@ -21,16 +21,16 @@ const UITemplateMobile = (props: any) => {
   const defaultRoute = '/user/dashboard';
   return (
     <>
-      <div className="HScreen m-0 bg-gradient-to-b from-grad-default-white-from to-grad-default-white-to">
-        <div className="HScreen max-w-lg flex flex-col divide-y-1.5 mx-auto">
+      <div className="HScreen from-grad-default-white-from to-grad-default-white-to m-0 bg-gradient-to-b">
+        <div className="HScreen divide-y-1.5 mx-auto flex max-w-lg flex-col">
           {menuUIIsShow.isShowHeader && (
-            <div className="h-12 pb-0.5 text-primary w-full text-2xl font-bold bg-white text-primary my-auto text-center flex flex-row justify-center items-center">
-              <div className="flex-1 mt-1 truncate text-ellipsis">{menu.sHeaderName}</div>
+            <div className="text-primary text-primary my-auto flex h-12 w-full flex-row items-center justify-center bg-white pb-0.5 text-center text-2xl font-bold">
+              <div className="mt-1 flex-1 truncate text-ellipsis">{menu.sHeaderName}</div>
             </div>
           )}
 
           {menuUIIsShow.isShowI18n && (
-            <div className="h-12 pb-0.5 w-full font-bold bg-primary-hover text-white my-auto text-center flex flex-row justify-center items-center gap-x-2 text-xl">
+            <div className="bg-primary-hover my-auto flex h-12 w-full flex-row items-center justify-center gap-x-2 pb-0.5 text-center text-xl font-bold text-white">
               <input
                 type="radio"
                 name="EN"
@@ -49,9 +49,9 @@ const UITemplateMobile = (props: any) => {
               TH
             </div>
           )}
-          <div className="flex-1 flex flex-col overflow-clip">{props.children}</div>
+          <div className="flex flex-1 flex-col overflow-clip">{props.children}</div>
           {menuUIIsShow.isShowFooter && (
-            <div className="h-15 pb-0.5 bg-white w-full flex flex-row justify-around items-center px-5">
+            <div className="h-15 flex w-full flex-row items-center justify-around bg-white px-5 pb-0.5">
               <LinkSafe
                 className="flex justify-items-center"
                 disabled={menu.iIconID === 1}

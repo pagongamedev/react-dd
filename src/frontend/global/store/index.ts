@@ -13,7 +13,7 @@ import { GameCore } from '../../../interactive/domain/three-js';
 
 // ============ Store ==============
 
-type TypeStoreGlobal = {
+export type TypeStoreGlobal = {
   gameCore: GameCore;
   isLoading: boolean;
   sI18NDomainName: string;
@@ -112,7 +112,7 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
 
   //   // console.log('resAuth.res ', resAuth.res);
 
-  //   // const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
+  //   // const { setUserData } = useStoreGlobalPersist(['setUserData']);
   //   const { setUserData }: any = storePersist.getState();
   //   setUserData(resAuth.res);
   //   setState({ isLoading: false });
@@ -122,7 +122,7 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
   // signOut: async () => {
   //   setState({ isLoading: true });
   //   await FirebaseSignOut();
-  //   // const { setUserData }: any = useStoreGlobalPersist(['setUserData']);
+  //   // const { setUserData } = useStoreGlobalPersist(['setUserData']);
   //   const { setUserData }: any = storePersist.getState();
   //   setUserData(null);
   //   setState({ isLoading: false });
@@ -131,8 +131,11 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
 
 // ============ Export ==============
 
-export const useStoreGlobal = (stateList: string[], isShallow?: boolean) => {
-  return helperZustand.StateMapping(stateList, storeGlobal, isShallow);
+export const useStoreGlobal = (
+  stateList: string[],
+  isShallow?: boolean,
+): TypeStoreGlobal => {
+  return helperZustand.StateMapping(stateList, storeGlobal, isShallow) as TypeStoreGlobal;
 };
 
 export const getMethodStoreGlobal = (): TypeMethodStoreGlobal => {

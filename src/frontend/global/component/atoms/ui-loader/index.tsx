@@ -5,7 +5,7 @@ import { RotateSpinner } from 'react-spinners-kit';
 import { useStoreGlobal } from '../../../store';
 
 const UILoader = (props: any) => {
-  const { isLoading }: any = useStoreGlobal(['isLoading']);
+  const { isLoading } = useStoreGlobal(['isLoading']);
   if (isLoading) {
     return (
       <>

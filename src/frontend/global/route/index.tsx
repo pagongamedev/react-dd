@@ -21,7 +21,7 @@ const i18nList: helperI18Next.TypeI18NDomain[] = [
 ];
 
 const JSX = (props: any) => {
-  const { userData }: any = useStoreGlobalPersist(['userData']);
+  const { userData } = useStoreGlobalPersist(['userData']);
 
   return (
     <BrowserRouter>

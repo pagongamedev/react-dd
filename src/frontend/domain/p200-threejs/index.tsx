@@ -40,7 +40,7 @@ class GameThreeJS extends React.Component<
 
 // For Re Renderer Only Score
 const JSXScore = () => {
-  const { gameCore }: any = useStoreGlobal(['gameCore']);
+  const { gameCore } = useStoreGlobal(['gameCore']);
   const [score, setScore] = useState<number>(0);
   useEffect(() => {
     gameCore.setCallbackSetScore(onClickScore);
@@ -51,7 +51,7 @@ const JSXScore = () => {
   };
 
   return (
-    <div className="flex-none h-12 pb-0.5 w-full font-bold bg-primary-hover text-white my-auto text-center flex flex-row justify-center items-center gap-x-2 text-xl">
+    <div className="bg-primary-hover my-auto flex h-12 w-full flex-none flex-row items-center justify-center gap-x-2 pb-0.5 text-center text-xl font-bold text-white">
       Score : {score}
     </div>
   );
@@ -59,7 +59,7 @@ const JSXScore = () => {
 
 const JSX = () => {
   const { setMenu, setI18NDomainName, setMenuUIIsShow } = getMethodStoreGlobal();
-  const { gameCore }: any = useStoreGlobal(['gameCore']);
+  const { gameCore } = useStoreGlobal(['gameCore']);
 
   // const { t } = useTranslation([sI18nDomainName]);
 

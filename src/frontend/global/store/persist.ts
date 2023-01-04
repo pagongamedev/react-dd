@@ -42,8 +42,15 @@ const methodStoreGlobalPersist: TypeMethodStoreGlobalPersist = {
 
 // ============ Export ==============
 
-export const useStoreGlobalPersist = (stateList: string[], isShallow?: boolean) => {
-  return helperZustand.StateMapping(stateList, storeGlobalPersist, isShallow);
+export const useStoreGlobalPersist = (
+  stateList: string[],
+  isShallow?: boolean,
+): TypeStoreGlobalPersist => {
+  return helperZustand.StateMapping(
+    stateList,
+    storeGlobalPersist,
+    isShallow,
+  ) as TypeStoreGlobalPersist;
 };
 
 export const getMethodStoreGlobalPersist = (): TypeMethodStoreGlobalPersist => {

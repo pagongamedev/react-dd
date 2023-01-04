@@ -22,7 +22,7 @@ const JSX = () => {
   }, []);
   return (
     <>
-      <div className="flex-1 overflow-x-auto">Three JS Go</div>
+      <div className="flex-1 overflow-y-auto scroll-smooth">Three JS Go</div>
     </>
   );
 };

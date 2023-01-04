@@ -17,4 +17,5 @@ export const middlewareInit = ({
   );
 
   //  middlewareFirebaseInit();
+  // middlewareChartJSInit
 };

@@ -22,7 +22,7 @@ const JSX = () => {
   }, []);
   return (
     <>
-      <div className="flex-1 overflow-x-auto">
+      <div className="flex-1 overflow-y-auto scroll-smooth">
         <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
         <UIMock data={{}} sI18nDomainName={sI18nDomainName} />
         <UIMock data={{}} sI18nDomainName={sI18nDomainName} />

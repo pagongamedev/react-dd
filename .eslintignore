@@ -10,3 +10,5 @@ lib/
 
 analytics/*
 .secret/*
+
+todo-list.md

@@ -1,3 +1,5 @@
+import PluginLineClamp from 'windicss/plugin/line-clamp';
+
 const range = (size, startAt = 1) => {
   return Array.from(Array(size).keys()).map((i) => i + startAt);
 };
@@ -6,6 +8,7 @@ export default {
   // attributify: {
   //   prefix: 'w:',
   // },
+  plugins: [PluginLineClamp],
   safelist: [
     range(101, 0).map((i) => {
       const sReturn = `w-[${i}%]`;

@@ -20,7 +20,7 @@ Create By Pagongamedev
 | Library   | chart.js            |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart                 |
 | Library   | react-chartjs-2     |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
 | Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
-| Library   | universal-helper    | 0.0.13  | https://reactrouter.com/en/main                      | Helper for clean code |
+| Library   | universal-helper    | 0.0.16  | https://reactrouter.com/en/main                      | Helper for clean code |
 | Library   | dayjs               | 1.11.7  | https://day.js.org/                                  | Date Helper           |
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |

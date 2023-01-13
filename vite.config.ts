@@ -11,7 +11,11 @@ export default defineConfig({
   resolve: {
     dedupe: ['react'],
   },
+  // esbuild: {
+  //   drop: ['console', 'debugger'],
+  // },
   build: {
+    minify: 'esbuild',
     sourcemap: false,
     rollupOptions: {
       plugins: [

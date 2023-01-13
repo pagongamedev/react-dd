@@ -1,13 +1,26 @@
 import { FirebaseApp } from 'firebase/app';
-import { Auth, getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import {
+  Auth,
+  browserLocalPersistence,
+  getAuth,
+  setPersistence,
+  signInWithEmailAndPassword,
+  signOut,
+} from 'firebase/auth';
 import { helperPromise } from 'universal-helper';
 
 let auth: Auth;
-export const AuthInit = (app: FirebaseApp) => {
+export const AuthInit = async (app: FirebaseApp) => {
+  console.log('Firebase Init : Auth');
   auth = getAuth(app);
+  await setPersistence(auth, browserLocalPersistence);
 };
 
-const GetCurrentUser = () => auth.currentUser;
+export const GetAuth = (): Auth => {
+  return auth;
+};
+
+// ================================================
 
 const SignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
   return helperPromise.GolangResponse(
@@ -29,4 +42,4 @@ const SignOut = () => {
 //   }
 // });
 
-export default { GetCurrentUser, SignInWithEmailAndPassword, SignOut };
+export default { SignInWithEmailAndPassword, SignOut, GetAuth };

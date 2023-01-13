@@ -2,7 +2,7 @@ import { helperI18Next } from 'universal-helper';
 
 // import { middlewareFirebaseInit } from './firebase';
 
-export const middlewareInit = ({
+export const middlewareInit = async ({
   i18nList = [],
 }: {
   i18nList: helperI18Next.TypeI18NDomain[];

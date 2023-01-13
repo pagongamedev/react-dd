@@ -3,8 +3,15 @@ import { doc, Firestore, getDoc, getFirestore, setDoc } from 'firebase/firestore
 
 let firestore: Firestore;
 export const FirestoreInit = (app: FirebaseApp) => {
+  console.log('Firebase Init : Firestore');
   firestore = getFirestore(app);
 };
+
+export const GetFirestore = (): Firestore => {
+  return firestore;
+};
+
+// ====================================
 
 const GetDocOrCreateIfNotExist = async (
   sCollection: string,

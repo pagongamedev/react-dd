@@ -130,7 +130,6 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
 };
 
 // ============ Export ==============
-
 export const useStoreGlobal = (
   stateList: string[],
   isShallow?: boolean,

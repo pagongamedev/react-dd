@@ -2,6 +2,7 @@ import { FirebaseApp } from 'firebase/app';
 import {
   Auth,
   browserLocalPersistence,
+  createUserWithEmailAndPassword,
   getAuth,
   setPersistence,
   signInWithEmailAndPassword,
@@ -28,6 +29,12 @@ const SignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
   );
 };
 
+const CreateUserWithEmailAndPassword = (sEmail: string, sPassword: string) => {
+  return helperPromise.GolangResponse(
+    createUserWithEmailAndPassword(auth, sEmail, sPassword),
+  );
+};
+
 const SignOut = () => {
   return signOut(auth);
 };
@@ -42,4 +49,9 @@ const SignOut = () => {
 //   }
 // });
 
-export default { SignInWithEmailAndPassword, SignOut, GetAuth };
+export default {
+  SignInWithEmailAndPassword,
+  CreateUserWithEmailAndPassword,
+  SignOut,
+  GetAuth,
+};

@@ -16,3 +16,19 @@ export type TypeRepositoryPattern = {
   }) => Promise<helperType.TypeAPIDataGolangResponse>;
   updateUserAcceptAgreement: () => Promise<helperType.TypeAPIDataGolangResponse>;
 };
+
+// const fetchData = async () => {
+//   setLoading(true);
+//   const resData = await API.findAssessmentFromOrganizationID(
+//     userData.profile.organizationID,
+//   );
+//   if (resData.error) {
+//     console.log('error :', resData.error);
+//     setLoading(false);
+//     return;
+//   }
+//   setLoading(false);
+//   // console.log('resData', resData.res);
+
+//   setContent(resData.res.data);
+// };

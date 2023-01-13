@@ -1,6 +1,6 @@
 import { helperI18Next } from 'universal-helper';
 
-// import { middlewareFirebaseInit } from './firebase';
+// import { middlewareFirebase, middlewareFirebaseInit } from './firebase';
 
 export const middlewareInit = async ({
   i18nList = [],
@@ -16,6 +16,6 @@ export const middlewareInit = async ({
     i18nList,
   );
 
-  //  middlewareFirebaseInit();
+  // await middlewareFirebaseInit();
   // middlewareChartJSInit
 };

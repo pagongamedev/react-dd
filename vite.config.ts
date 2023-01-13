@@ -15,6 +15,7 @@ export default defineConfig({
   //   drop: ['console', 'debugger'],
   // },
   build: {
+    // outDir: './hosting/public',
     minify: 'esbuild',
     sourcemap: false,
     rollupOptions: {

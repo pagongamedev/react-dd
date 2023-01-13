@@ -10,8 +10,8 @@ import {
 } from 'firebase/firestore';
 import { helperPromise, helperType } from 'universal-helper';
 
-import { middlewareFirebase } from '../../../core/middleware/firebase';
-import { GetFirestore } from '../../../core/middleware/firebase/firestore';
+import { middlewareFirebase } from '../../../../core/middleware/firebase';
+import { GetFirestore } from '../../../../core/middleware/firebase/firestore';
 
 export const createUserProfile = async (payload: {
   title: string;
@@ -97,40 +97,44 @@ export const readUserProfile =
     const resUser = (resUserQuery.res as DocumentSnapshot).data();
     // console.log('resUser', resUser);
 
-    // ========== if no profile create user
-    if (!resUser || (resUser && !('profile' in resUser))) {
-      console.log('no profile');
-      await setDoc(doc(refUserCollection, currentUser.uid), {}, { merge: true });
-      return { res: { data: { _id: currentUser.uid } }, error: null };
-    }
-
-    // ======== Organization ========
-    const refOrganizationCollection = collection(GetFirestore(), 'organization');
-    const refOrganizationDoc = doc(
-      refOrganizationCollection,
-      resUser?.profile.organizationID,
-    );
-    const resOrganizationQuery = await helperPromise.GolangResponse(
-      getDoc(refOrganizationDoc),
-    );
-    // const resOrganizationQuery = await getDoc(refOrganizationDoc);
-
-    if (resOrganizationQuery.error) {
-      console.log('resOrganizationQuery error :', resOrganizationQuery.error);
-      return resOrganizationQuery;
-    }
-    const resOrganization = (resOrganizationQuery.res as DocumentSnapshot).data();
-
     const res: helperType.TypeAPIData = {
-      data: {
-        _id: currentUser.uid,
-        ...resUser,
-        organization: {
-          _id: resUser?.profile.organizationID,
-          ...resOrganization,
-        },
-      },
+      data: resUser,
     };
+
+    // // ========== if no profile create user
+    // if (!resUser || (resUser && !('profile' in resUser))) {
+    //   console.log('no profile');
+    //   await setDoc(doc(refUserCollection, currentUser.uid), {}, { merge: true });
+    //   return { res: { data: { _id: currentUser.uid } }, error: null };
+    // }
+
+    // // ======== Organization ========
+    // const refOrganizationCollection = collection(GetFirestore(), 'organization');
+    // const refOrganizationDoc = doc(
+    //   refOrganizationCollection,
+    //   resUser?.profile.organizationID,
+    // );
+    // const resOrganizationQuery = await helperPromise.GolangResponse(
+    //   getDoc(refOrganizationDoc),
+    // );
+    // // const resOrganizationQuery = await getDoc(refOrganizationDoc);
+
+    // if (resOrganizationQuery.error) {
+    //   console.log('resOrganizationQuery error :', resOrganizationQuery.error);
+    //   return resOrganizationQuery;
+    // }
+    // const resOrganization = (resOrganizationQuery.res as DocumentSnapshot).data();
+
+    // const res: helperType.TypeAPIData = {
+    //   data: {
+    //     _id: currentUser.uid,
+    //     ...resUser,
+    //     organization: {
+    //       _id: resUser?.profile.organizationID,
+    //       ...resOrganization,
+    //     },
+    //   },
+    // };
 
     return { res, error: null };
   };
@@ -151,5 +155,5 @@ export const updateUserAcceptAgreement =
       { isAcceptAgreement: true },
       { merge: true },
     );
-    return { res: { data: { _id: currentUser.uid } }, error: null };
+    return { res: { data: { _id: 'aa' } }, error: null };
   };

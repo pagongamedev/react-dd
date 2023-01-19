@@ -20,14 +20,16 @@ Create By Pagongamedev
 | Library   | chart.js            |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart                 |
 | Library   | react-chartjs-2     |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
 | Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
-| Library   | universal-helper    | 0.0.16  | https://reactrouter.com/en/main                      | Helper for clean code |
+| Library   | immer               | 9.0.17  | https://immerjs.github.io/immer/                     | Nested State Helper   |
+| Library   | universal-helper    | 0.0.16  | https://github.com/pagongamedev/universal-helper     | Helper for clean code |
 | Library   | dayjs               | 1.11.7  | https://day.js.org/                                  | Date Helper           |
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |
 | JavaScript Runtime | node                             | 19.0.0  | https://nodejs.org/en/download/current/                |                         |
 | Module Bundler     | viteJS                           |  4.0.3  | https://vitejs.dev/guide/Library                       |                         |
-| Framework          | typescript                       |  4.9.3  | https://www.typescriptlang.org/                        | Installed by ViteJS     |
+| Framework          | typescript                       |  4.9.3  | https://www.typescriptlang.org/                        | Installed by ViteJS     | npm i immer |
+| Plugin             | vite-plugin-top-level-await      |  1.2.2  | https://github.com/Menci/vite-plugin-top-level-await   | await without esnext    |
 | Plugin             | vite-plugin-windicss             | 1.8.10  | https://windicss.org/integrations/vite.html            | CSS                     |
 | Plugin             | rollup-plugin-visualizer         |  5.8.3  | https://www.npmjs.com/package/rollup-plugin-visualizer | Visualizer              |
 | Library            | prettier                         |  2.8.1  | https://prettier.io/docs/en/configuration.html         | Format Document Rule    |

@@ -10,7 +10,7 @@ const UILoader = (props: any) => {
     return (
       <>
         {props.children}
-        <div className="HScreen BGLoaderOverlay flex items-center justify-center">
+        <div className="uh-h-screen BGLoaderOverlay flex items-center justify-center">
           <RotateSpinner size={60} color="white" className="" />
         </div>
       </>

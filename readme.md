@@ -21,7 +21,7 @@ Create By Pagongamedev
 | Library   | react-chartjs-2     |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
 | Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
 | Library   | immer               | 9.0.18  | https://immerjs.github.io/immer/                     | Nested State Helper   |
-| Library   | universal-helper    | 0.0.16  | https://github.com/pagongamedev/universal-helper     | Helper for clean code |
+| Library   | universal-helper    | 0.0.22  | https://github.com/pagongamedev/universal-helper     | Helper for clean code |
 | Library   | dayjs               | 1.11.7  | https://day.js.org/                                  | Date Helper           |
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |

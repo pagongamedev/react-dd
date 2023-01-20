@@ -86,10 +86,10 @@ const JSX = () => {
   };
 
   return (
-    <div className="HScreen bg-gradient-to-b from-neutral-50 to-neutral-100">
+    <div className="uh-h-screen bg-gradient-to-b from-neutral-50 to-neutral-100">
       <div className="RSU">
-        <div className="HScreen container w-sm max-w-full mx-auto flex flex-col justify-center">
-          <div className="text-center font-medium text-gray-500 text-7xl">
+        <div className="uh-h-screen w-sm container mx-auto flex max-w-full flex-col justify-center">
+          <div className="text-center text-7xl font-medium text-gray-500">
             Boilerplate
           </div>
           {/* <select
@@ -119,88 +119,88 @@ const JSX = () => {
           </div>
 
           <form className="mt-2" onSubmit={handleSubmit(onSubmit)}>
-            <div className="flex-none mx-auto max-w-lg ">
+            <div className="mx-auto max-w-lg flex-none ">
               <div
                 className={
-                  'rounded w-full bg-white border-1 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none ' +
+                  'border-1 w-full rounded border-gray-300 bg-white placeholder-gray-600 shadow-md focus:border-gray-600 focus:bg-white focus:placeholder-gray-500 focus:outline-none ' +
                   (errors.username || errors.global ? 'border-2 border-red-500' : '')
                 }
               >
-                <div className="py-0.5 divide-x-2 flex divide-gray-300 pr-2">
-                  <div className="flex-none w-10 my-auto pb-0.5">
-                    <RiUserLine color="DimGray" size="1.2em" className="block m-auto" />
+                <div className="flex divide-x-2 divide-gray-300 py-0.5 pr-2">
+                  <div className="my-auto w-10 flex-none pb-0.5">
+                    <RiUserLine color="DimGray" size="1.2em" className="m-auto block" />
                   </div>
                   <input
                     {...register('username')}
                     placeholder={t('form.username.placeholder') || ''}
                     type="email"
-                    className="flex-1 text-xl h-10 text-gray-600 pl-2 pt-1 placeholder-gray-400 focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none "
+                    className="h-10 flex-1 pl-2 pt-1 text-xl text-gray-600 placeholder-gray-400 focus:border-gray-600 focus:bg-white focus:placeholder-gray-500 focus:outline-none "
                   />
                 </div>
               </div>
               {errors.username && (
-                <div className="h-5 mt-2 text-left text-red-500">
+                <div className="mt-2 h-5 text-left text-red-500">
                   {helperI18Next.MappingObject(errors.username.message, t)}
                 </div>
               )}
               <div
                 className={
-                  'mt-2 rounded w-full bg-white border-1 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none ' +
+                  'border-1 mt-2 w-full rounded border-gray-300 bg-white placeholder-gray-600 shadow-md focus:border-gray-600 focus:bg-white focus:placeholder-gray-500 focus:outline-none ' +
                   (errors.password || errors.global ? 'border-2 border-red-500' : '')
                 }
               >
-                <div className="py-0.5 divide-x-2 flex divide-gray-300">
-                  <div className="flex-none w-10 my-auto pb-0.5">
-                    <RiLockLine color="DimGray" size="1.2em" className="block m-auto" />
+                <div className="flex divide-x-2 divide-gray-300 py-0.5">
+                  <div className="my-auto w-10 flex-none pb-0.5">
+                    <RiLockLine color="DimGray" size="1.2em" className="m-auto block" />
                   </div>
                   <input
                     placeholder={t('form.password.placeholder') || ''}
                     {...register('password')}
                     type={isShowPassword ? 'text' : 'password'}
                     /* block py-2 */
-                    className="flex-1 text-xl h-10 text-gray-600 pl-2 pt-1 placeholder-gray-400 focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
+                    className="h-10 flex-1 pl-2 pt-1 text-xl text-gray-600 placeholder-gray-400 focus:border-gray-600 focus:bg-white focus:placeholder-gray-500 focus:outline-none"
                   />
                   <div
-                    className="flex-none w-10 my-auto pb-0.5"
+                    className="my-auto w-10 flex-none pb-0.5"
                     onClick={onClickShowPassword}
                   >
                     {isShowPassword && (
                       <RiEyeOffLine
                         color="DimGray"
                         size="1.2em"
-                        className="block m-auto"
+                        className="m-auto block"
                       />
                     )}
                     {!isShowPassword && (
-                      <RiEyeLine color="DimGray" size="1.2em" className="block m-auto" />
+                      <RiEyeLine color="DimGray" size="1.2em" className="m-auto block" />
                     )}
                   </div>
                 </div>
               </div>
               {errors.password && (
-                <div className="h-5 mt-2 text-left text-red-500">
+                <div className="mt-2 h-5 text-left text-red-500">
                   {helperI18Next.MappingObject(errors.password.message, t)}
                 </div>
               )}
               {errors.global && (
-                <div className="h-5 mt-2 text-left text-red-500">
+                <div className="mt-2 h-5 text-left text-red-500">
                   {helperI18Next.MappingObject(errors.global.message, t)}
                 </div>
               )}
               <button
                 disabled={!isDirty || !isValid}
                 type="submit"
-                className="mt-7 text-3xl font-medium
-                w-full text-white rounded
-                px-6 py-3 block  bg-primary shadow-xl hover:bg-primary-hover
-                disabled:text-gray-300
-                disabled:bg-gray-500"
+                className="bg-primary hover:bg-primary-hover mt-7
+                block w-full rounded
+                px-6 py-3 text-3xl  font-medium text-white shadow-xl
+                disabled:bg-gray-500
+                disabled:text-gray-300"
               >
                 {t('form.login')}
               </button>
             </div>
           </form>
-          <div className="mt-5 text-xl grid grid-cols-2">
+          <div className="mt-5 grid grid-cols-2 text-xl">
             <div>User : {testUser}</div>
             <div>Password : {testPassword}</div>
             <div>Test Globel Error</div>

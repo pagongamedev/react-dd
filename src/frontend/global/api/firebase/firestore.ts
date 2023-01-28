@@ -8,7 +8,7 @@ import {
   QuerySnapshot,
   setDoc,
 } from 'firebase/firestore';
-import { helperPromise, helperType } from 'universal-helper';
+import { HelperPromise, HelperType } from 'universal-helper';
 
 import { middlewareFirebase } from '../../../../core/middleware/firebase';
 import { GetFirestore } from '../../../../core/middleware/firebase/firestore';
@@ -24,7 +24,7 @@ export const createUserProfile = async (payload: {
   organizationID: string;
   signInFrom: string | null;
   photoURL: string | null;
-}): Promise<helperType.TypeAPIDataGolangResponse> => {
+}): Promise<HelperType.TypeAPIDataGolangResponse> => {
   const { currentUser } = middlewareFirebase.Auth.GetAuth();
   if (!currentUser || !currentUser.uid) {
     console.log('currentUser not find');
@@ -35,7 +35,7 @@ export const createUserProfile = async (payload: {
   // ======== Organization ========
   const refOrganizationCollection = collection(GetFirestore(), 'organization');
   const refOrganizationDoc = doc(refOrganizationCollection, payload.organizationID);
-  const resOrganizationQuery = await helperPromise.GolangResponse(
+  const resOrganizationQuery = await HelperPromise.GolangResponse(
     getDoc(refOrganizationDoc),
   );
   // const resOrganizationQuery = await getDoc(refOrganizationDoc);
@@ -58,7 +58,7 @@ export const createUserProfile = async (payload: {
     { merge: true },
   );
 
-  const res: helperType.TypeAPIData = {
+  const res: HelperType.TypeAPIData = {
     data: {
       _id: currentUser.uid,
       profile: { ...payload },
@@ -75,7 +75,7 @@ export const createUserProfile = async (payload: {
 };
 
 export const readUserProfile =
-  async (): Promise<helperType.TypeAPIDataGolangResponse> => {
+  async (): Promise<HelperType.TypeAPIDataGolangResponse> => {
     const { currentUser } = middlewareFirebase.Auth.GetAuth();
     if (!currentUser || !currentUser.uid) {
       console.log('currentUser not find');
@@ -86,7 +86,7 @@ export const readUserProfile =
     // ======== User ========
     const refUserCollection = collection(GetFirestore(), 'users');
     const refUserDoc = doc(refUserCollection, currentUser.uid);
-    const resUserQuery = await helperPromise.GolangResponse(getDoc(refUserDoc));
+    const resUserQuery = await HelperPromise.GolangResponse(getDoc(refUserDoc));
     // const resOrganizationQuery = await getDoc(refOrganizationDoc);
 
     if (resUserQuery.error) {
@@ -97,7 +97,7 @@ export const readUserProfile =
     const resUser = (resUserQuery.res as DocumentSnapshot).data();
     // console.log('resUser', resUser);
 
-    const res: helperType.TypeAPIData = {
+    const res: HelperType.TypeAPIData = {
       data: resUser,
     };
 
@@ -114,7 +114,7 @@ export const readUserProfile =
     //   refOrganizationCollection,
     //   resUser?.profile.organizationID,
     // );
-    // const resOrganizationQuery = await helperPromise.GolangResponse(
+    // const resOrganizationQuery = await HelperPromise.GolangResponse(
     //   getDoc(refOrganizationDoc),
     // );
     // // const resOrganizationQuery = await getDoc(refOrganizationDoc);
@@ -125,7 +125,7 @@ export const readUserProfile =
     // }
     // const resOrganization = (resOrganizationQuery.res as DocumentSnapshot).data();
 
-    // const res: helperType.TypeAPIData = {
+    // const res: HelperType.TypeAPIData = {
     //   data: {
     //     _id: currentUser.uid,
     //     ...resUser,
@@ -140,7 +140,7 @@ export const readUserProfile =
   };
 
 export const updateUserAcceptAgreement =
-  async (): Promise<helperType.TypeAPIDataGolangResponse> => {
+  async (): Promise<HelperType.TypeAPIDataGolangResponse> => {
     const { currentUser } = middlewareFirebase.Auth.GetAuth();
     if (!currentUser || !currentUser.uid) {
       console.log('currentUser not find');

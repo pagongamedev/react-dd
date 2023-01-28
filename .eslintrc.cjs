@@ -33,6 +33,23 @@ module.exports = {
   ],
   plugins: ['simple-import-sort', 'prettier', 'check-file', 'unicorn'],
   rules: {
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'variable',
+        // 'PascalCase' for react component
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+      {
+        selector: ['default', 'variable'],
+        modifiers: ['exported'],
+        format: ['PascalCase'],
+      },
+    ],
     'unicorn/filename-case': [
       'error',
       {

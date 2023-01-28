@@ -1,4 +1,4 @@
-import { helperZustand } from 'universal-helper';
+import { HelperZustand } from 'universal-helper';
 import create from 'zustand';
 
 // import {
@@ -7,8 +7,8 @@ import create from 'zustand';
 // } from '../../../core/middleware/firebase';
 import { GameCore } from '../../../interactive/domain/three-js';
 
-// export const getMethodStoreGlobalPersist = (): TypeStoreGlobalMethodPersist => {
-//   return storeGlobalPersist.getState().method;
+// export const GetMethodStoreGlobalPersist = (): TypeStoreGlobalMethodPersist => {
+//   return StoreGlobalPersist.getState().method;
 // };
 
 // ============ Store ==============
@@ -29,7 +29,7 @@ export type TypeStoreGlobal = {
   count: number;
 };
 
-export const storeGlobal = create(
+export const StoreGlobal = create(
   (): TypeStoreGlobal => ({
     gameCore: new GameCore(),
     isLoading: false,
@@ -60,31 +60,31 @@ export type TypeMethodStoreGlobal = {
     isShowFooter: boolean,
   ) => void;
 
-  // signIn: (sEmail: string, sPassword: string) => Promise<helperType.TypeGolangResponse>;
+  // signIn: (sEmail: string, sPassword: string) => Promise<HelperType.TypeGolangResponse>;
   // signOut: () => void;
 };
 
-export const methodStoreGlobal: TypeMethodStoreGlobal = {
+const methodStoreGlobal: TypeMethodStoreGlobal = {
   setLoading: (isLoading: boolean) => {
-    storeGlobal.setState({ isLoading });
+    StoreGlobal.setState({ isLoading });
   },
   // user: '',
   // setUser: (name: string) => setState(() => ({ user: name })),
   setI18NDomainName: (sI18NDomainName: string) => {
-    storeGlobal.setState({ sI18NDomainName });
+    StoreGlobal.setState({ sI18NDomainName });
   },
   setMenu: (sHeaderName: string, iIconID: number) => {
-    storeGlobal.setState({
+    StoreGlobal.setState({
       menu: { sHeaderName, iIconID },
     });
   },
   setCountIncrease: () => {
-    storeGlobal.setState((state: TypeStoreGlobal) => ({
+    StoreGlobal.setState((state: TypeStoreGlobal) => ({
       count: state.count + 1,
     }));
   },
   setCountDecrease: () => {
-    storeGlobal.setState((state: TypeStoreGlobal) => ({
+    StoreGlobal.setState((state: TypeStoreGlobal) => ({
       count: state.count - 1,
     }));
   },
@@ -93,7 +93,7 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
     isShowI18n: boolean,
     isShowFooter: boolean,
   ) => {
-    storeGlobal.setState({
+    StoreGlobal.setState({
       menuUIIsShow: { isShowHeader, isShowI18n, isShowFooter },
     });
   },
@@ -112,7 +112,7 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
 
   //   // console.log('resAuth.res ', resAuth.res);
 
-  //   // const { setUserData } = useStoreGlobalPersist(['setUserData']);
+  //   // const { setUserData } = UseStoreGlobalPersist(['setUserData']);
   //   const { setUserData }: any = storePersist.getState();
   //   setUserData(resAuth.res);
   //   setState({ isLoading: false });
@@ -122,7 +122,7 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
   // signOut: async () => {
   //   setState({ isLoading: true });
   //   await FirebaseSignOut();
-  //   // const { setUserData } = useStoreGlobalPersist(['setUserData']);
+  //   // const { setUserData } = UseStoreGlobalPersist(['setUserData']);
   //   const { setUserData }: any = storePersist.getState();
   //   setUserData(null);
   //   setState({ isLoading: false });
@@ -130,16 +130,16 @@ export const methodStoreGlobal: TypeMethodStoreGlobal = {
 };
 
 // ============ Export ==============
-export const useStoreGlobal = (
+export const UseStoreGlobal = (
   stateList: string[],
   isShallow?: boolean,
 ): TypeStoreGlobal => {
-  return helperZustand.StateMapping(stateList, storeGlobal, isShallow) as TypeStoreGlobal;
+  return HelperZustand.StateMapping(stateList, StoreGlobal, isShallow) as TypeStoreGlobal;
 };
 
-export const getMethodStoreGlobal = (): TypeMethodStoreGlobal => {
+export const GetMethodStoreGlobal = (): TypeMethodStoreGlobal => {
   return methodStoreGlobal;
 };
 
-export const getStoreGlobal = () => storeGlobal.getState();
-export const setStoreGlobal = (prop: any) => storeGlobal.setState(prop);
+export const GetStoreGlobal = () => StoreGlobal.getState();
+export const SetStoreGlobal = (prop: any) => StoreGlobal.setState(prop);

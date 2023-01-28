@@ -33,7 +33,7 @@ const GetDocOrCreateIfNotExist = async (
 const GetDoc = (sCollection: string, sDoc: string) => {
   return getDoc(doc(firestore, sCollection, sDoc));
 
-  // return helperPromise.GolangResponse(getDoc(doc(firestore, sCollection, sDoc)));
+  // return HelperPromise.GolangResponse(getDoc(doc(firestore, sCollection, sDoc)));
 };
 const SetDoc = (
   sCollection: string,
@@ -47,7 +47,7 @@ const SetDoc = (
     isMerge ? { merge: true } : {},
   );
 
-  // return helperPromise.GolangResponse(getDoc(doc(firestore, sCollection, sDoc)));
+  // return HelperPromise.GolangResponse(getDoc(doc(firestore, sCollection, sDoc)));
 };
 
 export default {

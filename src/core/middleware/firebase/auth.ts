@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
-import { helperPromise } from 'universal-helper';
+import { HelperPromise } from 'universal-helper';
 
 let auth: Auth;
 export const AuthInit = async (app: FirebaseApp) => {
@@ -24,13 +24,13 @@ export const GetAuth = (): Auth => {
 // ================================================
 
 const SignInWithEmailAndPassword = (sEmail: string, sPassword: string) => {
-  return helperPromise.GolangResponse(
+  return HelperPromise.GolangResponse(
     signInWithEmailAndPassword(auth, sEmail, sPassword),
   );
 };
 
 const CreateUserWithEmailAndPassword = (sEmail: string, sPassword: string) => {
-  return helperPromise.GolangResponse(
+  return HelperPromise.GolangResponse(
     createUserWithEmailAndPassword(auth, sEmail, sPassword),
   );
 };

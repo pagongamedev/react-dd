@@ -1,4 +1,4 @@
-import { helperZustand } from 'universal-helper';
+import { HelperZustand } from 'universal-helper';
 import create from 'zustand';
 import { persist } from 'zustand/middleware';
 
@@ -8,7 +8,7 @@ export type TypeStoreGlobalPersist = {
 };
 
 // cant use method
-export const storeGlobalPersist = create(
+export const StoreGlobalPersist = create(
   persist(
     (): TypeStoreGlobalPersist => ({
       userData: null,
@@ -28,10 +28,10 @@ export type TypeMethodStoreGlobalPersist = {
 
 const methodStoreGlobalPersist: TypeMethodStoreGlobalPersist = {
   setUserData: (userData: any) => {
-    storeGlobalPersist.setState({ userData });
+    StoreGlobalPersist.setState({ userData });
   },
   updateUserData: (payload: any) => {
-    storeGlobalPersist.setState((state: TypeStoreGlobalPersist) => ({
+    StoreGlobalPersist.setState((state: TypeStoreGlobalPersist) => ({
       userData: {
         ...state.userData,
         payload,
@@ -42,20 +42,20 @@ const methodStoreGlobalPersist: TypeMethodStoreGlobalPersist = {
 
 // ============ Export ==============
 
-export const useStoreGlobalPersist = (
+export const UseStoreGlobalPersist = (
   stateList: string[],
   isShallow?: boolean,
 ): TypeStoreGlobalPersist => {
-  return helperZustand.StateMapping(
+  return HelperZustand.StateMapping(
     stateList,
-    storeGlobalPersist,
+    StoreGlobalPersist,
     isShallow,
   ) as TypeStoreGlobalPersist;
 };
 
-export const getMethodStoreGlobalPersist = (): TypeMethodStoreGlobalPersist => {
+export const GetMethodStoreGlobalPersist = (): TypeMethodStoreGlobalPersist => {
   return methodStoreGlobalPersist;
 };
 
-export const getStoreGlobalPersist = () => storeGlobalPersist.getState();
-export const setGlobalStorePersist = (prop: any) => storeGlobalPersist.setState(prop);
+export const GetStoreGlobalPersist = () => StoreGlobalPersist.getState();
+export const SetGlobalStorePersist = (prop: any) => StoreGlobalPersist.setState(prop);

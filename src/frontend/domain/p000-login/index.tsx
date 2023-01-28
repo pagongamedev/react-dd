@@ -6,18 +6,18 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { RiEyeLine, RiEyeOffLine, RiLockLine, RiUserLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
-import { helperI18Next, helperTime } from 'universal-helper';
+import { HelperI18Next, HelperTime } from 'universal-helper';
 import * as yup from 'yup';
 
-import { getMethodStoreGlobal } from '../../global/store';
-import { getMethodStoreGlobalPersist } from '../../global/store/persist';
+import { GetMethodStoreGlobal } from '../../global/store';
+import { GetMethodStoreGlobalPersist } from '../../global/store/persist';
 import initI18N from './i18n';
 
 const testUser = 't@t.com';
 const testPassword = 'testtest1234';
 
 const sI18nDomainName = 'login';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
+const I18N: HelperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const schema = yup.object({
   username: yup.string().required('validate.required').email('validate.email'),
@@ -37,14 +37,14 @@ const JSX = () => {
     formState: { errors, isDirty, isValid },
   } = useForm({ resolver: yupResolver(schema), mode: 'onChange' });
 
-  const { setLoading } = getMethodStoreGlobal();
-  const { setUserData } = getMethodStoreGlobalPersist();
+  const { setLoading } = GetMethodStoreGlobal();
+  const { setUserData } = GetMethodStoreGlobalPersist();
 
   const navigate = useNavigate();
 
   const firebaseLogin = async (sEmail: string, sPassword: string) => {
     setLoading(true);
-    await helperTime.WaitForMilliSecond(300);
+    await HelperTime.WaitForMilliSecond(300);
     setLoading(false);
 
     if (sEmail != testUser) {
@@ -140,7 +140,7 @@ const JSX = () => {
               </div>
               {errors.username && (
                 <div className="mt-2 h-5 text-left text-red-500">
-                  {helperI18Next.MappingObject(errors.username.message, t)}
+                  {HelperI18Next.MappingObject(errors.username.message, t)}
                 </div>
               )}
               <div
@@ -179,12 +179,12 @@ const JSX = () => {
               </div>
               {errors.password && (
                 <div className="mt-2 h-5 text-left text-red-500">
-                  {helperI18Next.MappingObject(errors.password.message, t)}
+                  {HelperI18Next.MappingObject(errors.password.message, t)}
                 </div>
               )}
               {errors.global && (
                 <div className="mt-2 h-5 text-left text-red-500">
-                  {helperI18Next.MappingObject(errors.global.message, t)}
+                  {HelperI18Next.MappingObject(errors.global.message, t)}
                 </div>
               )}
               <button

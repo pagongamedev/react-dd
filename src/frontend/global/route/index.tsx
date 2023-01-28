@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
-import { helperI18Next } from 'universal-helper';
+import { HelperI18Next } from 'universal-helper';
 
 import P000Login from '../../domain/p000-login';
 import P100Dashboard from '../../domain/p100-dashboard';
@@ -9,9 +9,9 @@ import P400ThreejsGo from '../../domain/p400-threejsgo';
 import P500Menu from '../../domain/p500-menu';
 import RoutePrivate from '../component/atoms/route-private';
 import TemplateMobile from '../component/templates/template-mobile';
-import { useStoreGlobalPersist } from '../store/persist';
+import { UseStoreGlobalPersist } from '../store/persist';
 
-const i18nList: helperI18Next.TypeI18NDomain[] = [
+const i18nList: HelperI18Next.TypeI18NDomain[] = [
   P000Login.I18N,
   P100Dashboard.I18N,
   P200ThreeJS.I18N,
@@ -21,7 +21,7 @@ const i18nList: helperI18Next.TypeI18NDomain[] = [
 ];
 
 const JSX = (props: any) => {
-  const { userData } = useStoreGlobalPersist(['userData']);
+  const { userData } = UseStoreGlobalPersist(['userData']);
 
   return (
     <BrowserRouter>

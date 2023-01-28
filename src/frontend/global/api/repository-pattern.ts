@@ -1,7 +1,7 @@
-import { helperType } from 'universal-helper';
+import { HelperType } from 'universal-helper';
 
 export type TypeRepositoryPattern = {
-  readUserProfile: () => Promise<helperType.TypeAPIDataGolangResponse>;
+  readUserProfile: () => Promise<HelperType.TypeAPIDataGolangResponse>;
   createUserProfile: (payload: {
     title: string;
     firstname: string;
@@ -13,8 +13,8 @@ export type TypeRepositoryPattern = {
     organizationID: string;
     signInFrom: string | null;
     photoURL: string | null;
-  }) => Promise<helperType.TypeAPIDataGolangResponse>;
-  updateUserAcceptAgreement: () => Promise<helperType.TypeAPIDataGolangResponse>;
+  }) => Promise<HelperType.TypeAPIDataGolangResponse>;
+  updateUserAcceptAgreement: () => Promise<HelperType.TypeAPIDataGolangResponse>;
 };
 
 // const fetchData = async () => {

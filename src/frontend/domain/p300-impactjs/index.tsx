@@ -1,19 +1,19 @@
 // import './index.css';
 
 import { useEffect } from 'react';
-import { helperI18Next } from 'universal-helper';
+import { HelperI18Next } from 'universal-helper';
 import { WaitForMilliSecond } from 'universal-helper/src/helper/time';
 
 // import scriptImport from '../../global/component/atoms/script-import';
 // import script1 from '../../../../lib/game';
 // import script2 from '../../../../lib/game/main.js';
 // import { useTranslation } from 'react-i18next';
-import { getMethodStoreGlobal } from '../../global/store';
+import { GetMethodStoreGlobal } from '../../global/store';
 import initI18N from './i18n';
 // import * from '../../../../src/interactive/domain/impact-js/'
 // import
 const sI18nDomainName = 'impactjs';
-const I18N: helperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
+const I18N: HelperI18Next.TypeI18NDomain = initI18N({ name: sI18nDomainName });
 
 const canvasGame = document.createElement('canvas');
 canvasGame.id = 'canvas';
@@ -22,7 +22,7 @@ const script1 = document.createElement('script');
 const script2 = document.createElement('script');
 
 const JSX = () => {
-  const { setMenu, setI18NDomainName, setMenuUIIsShow } = getMethodStoreGlobal();
+  const { setMenu, setI18NDomainName, setMenuUIIsShow } = GetMethodStoreGlobal();
 
   // const { t } = useTranslation([sI18nDomainName]);
   // scriptImport('lib/impact/impact.js');

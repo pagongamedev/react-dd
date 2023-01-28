@@ -5,8 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import Main from '../frontend/global';
-import { fixbugInit } from './fixbug';
-import { middlewareInit } from './middleware';
+import { FixbugInit } from './fixbug';
+import { MiddlewareInit } from './middleware';
 
 const StrictMode = (props: { children: React.ReactNode }) => {
   if (import.meta.env.VITE_DEBUG_IS_STRICT_MODE == 'true') {
@@ -18,8 +18,8 @@ const StrictMode = (props: { children: React.ReactNode }) => {
 };
 
 (async () => {
-  fixbugInit();
-  await middlewareInit({ i18nList: Main.i18nList });
+  FixbugInit();
+  await MiddlewareInit({ i18nList: Main.i18nList });
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <StrictMode>
       <Main.JSX />

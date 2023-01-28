@@ -2,17 +2,17 @@ import { useTranslation } from 'react-i18next';
 import { BiCube, BiGame, BiHome, BiMenu } from 'react-icons/bi';
 import { MdAddLocationAlt } from 'react-icons/md';
 
-import { getMethodStoreGlobal, getStoreGlobal, useStoreGlobal } from '../../../store';
+import { GetMethodStoreGlobal, GetStoreGlobal, UseStoreGlobal } from '../../../store';
 import LinkSafe from '../../atoms/link-safe';
 
 const UITemplateMobile = (props: any) => {
   const { t, i18n } = useTranslation(['main']);
-  const { sI18NDomainName } = getStoreGlobal();
+  const { sI18NDomainName } = GetStoreGlobal();
 
-  const { menu } = useStoreGlobal(['menu']);
-  const { menuUIIsShow } = useStoreGlobal(['menuUIIsShow']);
+  const { menu } = UseStoreGlobal(['menu']);
+  const { menuUIIsShow } = UseStoreGlobal(['menuUIIsShow']);
 
-  const { setMenu } = getMethodStoreGlobal();
+  const { setMenu } = GetMethodStoreGlobal();
   const onChangeLang = (lang: string) => {
     i18n.changeLanguage(lang);
     setMenu(t('header', { ns: sI18NDomainName }), 0);

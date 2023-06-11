@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { HelperI18Next } from 'universal-helper';
-import { WaitForMilliSecond } from 'universal-helper/src/helper/time';
+import { HelperTime } from 'universal-helper';
 
 // import scriptImport from '../../global/component/atoms/script-import';
 // import script1 from '../../../../lib/game';
@@ -35,14 +35,14 @@ const JSX = () => {
     script1.src = 'lib/impact/impact.js';
     script1.async = true;
     document.body.appendChild(script1);
-    await WaitForMilliSecond(10);
+    await HelperTime.WaitForMilliSecond(10);
     if (script2.src != '') {
       return;
     }
     script2.src = 'src/interactive/domain/impact-js/game/main.js';
     script2.async = true;
     document.body.appendChild(script2);
-    await WaitForMilliSecond(10);
+    await HelperTime.WaitForMilliSecond(10);
   };
 
   useEffect(() => {

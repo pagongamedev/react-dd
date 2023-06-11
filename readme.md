@@ -7,54 +7,55 @@ Create By Pagongamedev
 | --------- | ------------------- | :-----: | ---------------------------------------------------- | --------------------- |
 | Framework | react               | 18.2.0  | https://reactjs.org/                                 | Installed by ViteJS   |
 | Framework | react-dom           | 18.2.0  | https://reactjs.org/                                 | Installed by ViteJS   |
-| Library   | react-router-dom    |  6.4.5  | https://reactrouter.com/en/main                      | Route Management      |
-| Library   | react-hook-form     | 7.41.0  | https://react-hook-form.com                          | Helper Form           |
-| Library   | @hookform/resolvers | 2.9.10  | https://github.com/react-hook-form/resolvers         | Schema Resolve        |
-| Library   | yub                 | 0.11.1  | https://github.com/jquense/yup                       | Schema for form       |
-| Library   | react-i18next       | 12.1.1  | https://react.i18next.com/                           | i18n for react        |
-| Library   | i18next             | 22.4.5  | https://www.i18next.com/                             | i18n                  |
-| Library   | axios               |  1.2.1  | https://axios-http.com/                              | HTTP Client API       |
-| Library   | firebase            | 9.15.0  | https://firebase.google.com/docs/auth                | Firebase Auth         |
-| Library   | react-icons         |  4.7.1  | https://react-icons.github.io/react-icons/           | React Icon Font       |
+| Library   | react-router-dom    | 6.12.1  | https://reactrouter.com/en/main                      | Route Management      |
+| Library   | react-hook-form     | 7.44.3  | https://react-hook-form.com                          | Helper Form           |
+| Library   | @hookform/resolvers |  3.1.0  | https://github.com/react-hook-form/resolvers         | Schema Resolve        |
+| Library   | yup                 |  1.2.0  | https://github.com/jquense/yup                       | Schema for form       |
+| Library   | react-i18next       | 12.3.1  | https://react.i18next.com/                           | i18n for react        |
+| Library   | i18next             | 22.5.1  | https://www.i18next.com/                             | i18n                  |
+| Library   | axios               |  1.4.0  | https://axios-http.com/                              | HTTP Client API       |
+| Library   | firebase            | 9.22.2  | https://firebase.google.com/docs/auth                | Firebase Auth         |
+| Library   | react-icons         |  4.9.0  | https://react-icons.github.io/react-icons/           | React Icon Font       |
 | Library   | react-spinners-kit  |  1.9.1  | https://dmitrymorozoff.github.io/react-spinners-kit/ | React Spinner SVG     |
-| Library   | chart.js            |  4.0.1  | https://www.chartjs.org/docs/latest/                 | Chart                 |
-| Library   | react-chartjs-2     |  5.0.1  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
-| Library   | zustand             |  4.1.5  | https://github.com/pmndrs/zustand                    | State Management      |
-| Library   | immer               | 9.0.18  | https://immerjs.github.io/immer/                     | Nested State Helper   |
-| Library   | universal-helper    | 0.0.22  | https://github.com/pagongamedev/universal-helper     | Helper for clean code |
-| Library   | dayjs               | 1.11.7  | https://day.js.org/                                  | Date Helper           |
+| Library   | chart.js            |  4.3.0  | https://www.chartjs.org/docs/latest/                 | Chart                 |
+| Library   | react-chartjs-2     |  5.2.0  | https://react-chartjs-2.js.org/                      | Chart React Adapter   |
+| Library   | zustand             |  4.3.8  | https://github.com/pmndrs/zustand                    | State Management      |
+| Library   | immer               | 10.0.2  | https://immerjs.github.io/immer/                     | Nested State Helper   |
+| Library   | universal-helper    | 0.0.28  | https://github.com/pagongamedev/universal-helper     | Helper for clean code |
+| Library   | dayjs               | 1.11.8  | https://day.js.org/                                  | Date Helper           |
 
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |
 | JavaScript Runtime | node                             | 19.0.0  | https://nodejs.org/en/download/current/                |                         |
-| Module Bundler     | viteJS                           |  4.0.3  | https://vitejs.dev/guide/Library                       |                         |
-| Framework          | typescript                       |  4.9.3  | https://www.typescriptlang.org/                        | Installed by ViteJS     | npm i immer |
-| Plugin             | vite-plugin-top-level-await      |  1.2.2  | https://github.com/Menci/vite-plugin-top-level-await   | await without esnext    |
-| Plugin             | vite-plugin-windicss             | 1.8.10  | https://windicss.org/integrations/vite.html            | CSS                     |
-| Plugin             | rollup-plugin-visualizer         |  5.8.3  | https://www.npmjs.com/package/rollup-plugin-visualizer | Visualizer              |
-| Library            | prettier                         |  2.8.1  | https://prettier.io/docs/en/configuration.html         | Format Document Rule    |
-| Library            | eslint                           | 8.30.0  | https://eslint.org/docs/latest/user-guide/configuring/ | Format Document Rule    |
-| Plugin             | @typescript-eslint/eslint-plugin | 5.46.1  |                                                        | Eslint Plugin           |
-| Plugin             | @typescript-eslint/parser        | 5.46.1  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-config-prettier           |  8.5.0  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-import             | 2.60.0  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-jsx-a11y           |  6.6.1  |                                                        | Eslint Plugin (Disable) |
+| Module Bundler     | viteJS                           |  4.3.9  | https://vitejs.dev/guide/Library                       |                         |
+| Framework          | million                          |  2.4.4  | https://million.dev/docs/install                       | React Optimize Compiler |
+| Framework          | typescript                       |  5.1.3  | https://www.typescriptlang.org/                        | Installed by ViteJS     |
+| Plugin             | vite-plugin-windicss             |  1.9.0  | https://windicss.org/integrations/vite.html            | CSS                     |
+| Plugin             | rollup-plugin-visualizer         |  5.9.2  | https://www.npmjs.com/package/rollup-plugin-visualizer | Visualizer              |
+| Library            | prettier                         |  2.8.8  | https://prettier.io/docs/en/configuration.html         | Format Document Rule    |
+| Library            | eslint                           | 8.42.0  | https://eslint.org/docs/latest/user-guide/configuring/ | Format Document Rule    |
+| Plugin             | @typescript-eslint/eslint-plugin | 5.59.9  |                                                        | Eslint Plugin           |
+| Plugin             | @typescript-eslint/parser        | 5.59.9  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-config-prettier           |  4.2.1  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-import             | 2.27.5  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-jsx-a11y           |  6.7.1  |                                                        | Eslint Plugin (Disable) |
 | Plugin             | eslint-plugin-prettier           |  4.2.1  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-react              | 7.31.11 |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-simple-import-sort |  8.0.0  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-check-file         |  1.3.0  |                                                        | Eslint Plugin           |
-| Plugin             | eslint-plugin-unicorn            | 45.0.2  |                                                        | Eslint Plugin           |
-| Plugin             | prettier-plugin-tailwindcss      |  0.2.1  |                                                        | Prettier Plugin         |
-| Library            | vite-plugin-pwa                  | 0.14.0  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-react              | 7.32.2  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-simple-import-sort | 10.0.0  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-check-file         |  2.3.0  |                                                        | Eslint Plugin           |
+| Plugin             | eslint-plugin-unicorn            | 47.0.0  |                                                        | Eslint Plugin           |
+| Plugin             | prettier-plugin-tailwindcss      |  0.3.0  |                                                        | Prettier Plugin         |
+| Library            | vite-plugin-pwa                  | 0.16.4  |                                                        | Eslint Plugin           |
 
+ <!--               | Plugin                           | vite-plugin-top-level-await | 1.2.2                                                  | https://github.com/Menci/vite-plugin-top-level-await | await without esnext | --> 
 
 | Interactive Stack | Name  | Version | Link                 | Note            |
 | ----------------- | ----- | :-----: | -------------------- | --------------- |
-| Framework         | three | 0.148.0 | https://threejs.org/ | WebGL Framework |
+| Framework         | three | 0.153.0 | https://threejs.org/ | WebGL Framework |
 
 | Interactive Stack Dev | Name         | Version | Link | Note |
 | --------------------- | ------------ | :-----: | ---- | ---- |
-| Types                 | @types/three |   146   |      | Type |
+| Types                 | @types/three | 0.152.1 |      | Type |
 
 <br />
 

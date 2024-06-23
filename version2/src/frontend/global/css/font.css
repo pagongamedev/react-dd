@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'THSarabunNew';
+  src: local('THSarabunNew'),
+    url('/assets/fonts/THSarabunNew/THSarabunNew.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: local('THSarabunNew'),
+    url('/assets/fonts/THSarabunNew/THSarabunNew-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: local('THSarabunNew'),
+    url('/assets/fonts/THSarabunNew/THSarabunNew-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'THSarabunNew';
+  src: local('THSarabunNew'),
+    url('/assets/fonts/THSarabunNew/THSarabunNew-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.FontTHSarabunNew {
+  font-family: 'THSarabunNew';
+}
+
+@font-face {
+  font-family: 'Prompt';
+  src: local('Prompt'), url('/assets/fonts/Prompt/Prompt-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Prompt';
+  src: local('Prompt'), url('/assets/fonts/Prompt/Prompt-Light.ttf') format('truetype');
+  font-weight: 100;
+}
+
+.Prompt {
+  font-family: 'Prompt';
+  font-weight: normal;
+}
+
+.PromptLight {
+  font-family: 'Prompt';
+  font-weight: 100;
+}

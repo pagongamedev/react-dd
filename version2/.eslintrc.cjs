@@ -40,6 +40,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     // Custom Setting

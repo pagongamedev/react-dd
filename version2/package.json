@@ -13,15 +13,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.32.0",
     "million": "^3.0.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^14.1.1",
+    "react-spinners-kit": "^1.9.1",
+    "skillvir-game-core": "file:../../skillvir-game-core",
+    "skillvir-universal-helper": "file:../../skillvir-universal-helper",
+    "three": "^0.165.0"
   },
   "devDependencies": {
+    "@tanstack/router-devtools": "^1.32.0",
     "@types/node": "^20.12.10",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
-    "@types/three": "^0.164.0",
+    "@types/three": "^0.165.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",

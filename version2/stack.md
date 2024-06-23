@@ -40,5 +40,4 @@ Create By Pagongamedev
 
 
 
-
-https://tailwindcss.com/docs/guides/vite
+https://tanstack.com/router/latest/docs/framework/react/comparison

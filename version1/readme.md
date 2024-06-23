@@ -27,7 +27,7 @@ Create By Pagongamedev
 | Stack Dev          | Name                             | Version | Link                                                   | Note                    |
 | ------------------ | -------------------------------- | :-----: | ------------------------------------------------------ | ----------------------- |
 | JavaScript Runtime | node                             | 19.0.0  | https://nodejs.org/en/download/current/                |                         |
-| Module Bundler     | viteJS                           |  4.3.9  | https://vitejs.dev/guide/Library                       |                         |
+| Module Bundler     | viteJS                           |  4.3.9  | https://v4.vitejs.dev/guide/                           |                         |
 | Framework          | million                          |  2.4.4  | https://million.dev/docs/install                       | React Optimize Compiler |
 | Framework          | typescript                       |  5.1.3  | https://www.typescriptlang.org/                        | Installed by ViteJS     |
 | Plugin             | vite-plugin-windicss             |  1.9.0  | https://windicss.org/integrations/vite.html            | CSS                     |

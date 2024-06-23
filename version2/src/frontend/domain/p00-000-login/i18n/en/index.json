@@ -1,0 +1,20 @@
+{
+  "form": {
+    "username": {
+      "placeholder": "username"
+    },
+    "password": {
+      "placeholder": "password"
+    },
+    "login": "login"
+  },
+  "validate": {
+    "required": "please filling space",
+    "min_one": "please fill more than {{count}} character.",
+    "min_other": "please fill more than {{count}} characters.",
+    "userNotFound": "uset not found",
+    "passwordWrong": "wrong password",
+    "email": "invalid email type",
+    "networkRequestFailed": "can't connect network"
+  }
+}

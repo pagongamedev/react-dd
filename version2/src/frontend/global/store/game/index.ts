@@ -17,6 +17,7 @@ const store = create(
 // ============ Method ==============
 interface IMethod {
   gameInitial: (config: IGameCoreConfig) => void;
+  setGameCore: (gameCore: GameCore) => void;
   // setLoading: (isLoading: boolean) => void;
   // signIn: (sEmail: string, sPassword: string) => Promise<HelperType.TypeGolangResponse>;
   // signOut: () => void;
@@ -25,6 +26,9 @@ interface IMethod {
 const method: IMethod = {
   gameInitial: (config: IGameCoreConfig) => {
     store.setState(() => ({ gameCore: new GameCore(config) }));
+  },
+  setGameCore: (gameCore: GameCore) => {
+    store.setState(() => ({ gameCore }));
   },
 
   // setLoading: (isLoading: boolean) => {

@@ -45,26 +45,10 @@ HelperTanStackRouter.RouteRootCreate({
   Template: JSXRouterRoot,
 });
 
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-
-const gameLoop: IGameLoop = (context, deltaTime, timeStamp) => {
-  cube.rotation.x += (90 / 180) * Math.PI * deltaTime;
-  cube.rotation.y += (90 / 180) * Math.PI * deltaTime;
-  // context.renderer.render(context.scene, context.camera.main);
-};
-
-const gameCore = new GameCore({ gameLoop });
-gameCore.context.scene.add(cube);
-gameCore.context.camera.main.position.z = 5;
-// gameCore.context.scene.background = new THREE.Color(0x00bb00);
-
 const indexRoute = HelperTanStackRouter.RouteCreate({
   path: '/',
   component: function Index() {
-    // const { gameCore } = StoreGame.GetState(['gameCore']);
-    // StoreGame.GetMethod().gameInitial({ gameLoop });
+    const { gameCore } = StoreGame.GetState(['gameCore']);
     return (
       <div className="p-2">
         <h3>

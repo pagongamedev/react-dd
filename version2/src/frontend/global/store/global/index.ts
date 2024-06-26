@@ -4,7 +4,7 @@ import { create } from 'zustand';
 // import APIGlobal from '../api';
 // import { GetMethodStoreGlobalPersist } from './persist';
 
-// ============ Store ==============
+// ============ State ==============
 interface IState {
   isLoading: boolean;
 }

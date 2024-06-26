@@ -2,7 +2,7 @@ import HelperZustand from 'skillvir-universal-helper/zustand';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-// ============ Store ==============
+// ============ State ==============
 interface IState {
   userData: any;
 }

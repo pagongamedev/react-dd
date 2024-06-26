@@ -13,7 +13,7 @@ import {
 import React from 'react';
 import { ReactNode } from 'react';
 import { add } from 'skillvir-game-core';
-import { GameCore, IGameLoop, JSXEngineThree } from 'skillvir-game-core/engine/three';
+import { JSXEngineThree } from 'skillvir-game-core/engine/three';
 import { type TypeI18NDomain } from 'skillvir-universal-helper/i18next';
 import * as THREE from 'three';
 
@@ -22,6 +22,7 @@ import AtomUILoader from './component/atom/ui-loader';
 import initI18N from './i18n';
 import Route from './route';
 import StoreGame from './store/game';
+
 // i18n
 const i18nList: TypeI18NDomain[] = [initI18N({ name: 'main' }), ...Route.i18nList];
 const JSXRouterRoot = (props: { children?: JSX.Element }) => {
@@ -48,7 +49,8 @@ HelperTanStackRouter.RouteRootCreate({
 const indexRoute = HelperTanStackRouter.RouteCreate({
   path: '/',
   component: function Index() {
-    const { gameCore } = StoreGame.GetState(['gameCore']);
+    const { engineThree } = StoreGame.GetState(['engineThree']);
+
     return (
       <div className="p-2">
         <h3>
@@ -56,7 +58,7 @@ const indexRoute = HelperTanStackRouter.RouteCreate({
           {add(1, 2)}
         </h3>
         <div className="bg-red-500 h-screen">
-          <JSXEngineThree className="h-full" gameCore={gameCore} />
+          <JSXEngineThree className="h-full" engineThree={engineThree} />
         </div>
       </div>
     );

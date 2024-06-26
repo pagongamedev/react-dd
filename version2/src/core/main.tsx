@@ -1,7 +1,7 @@
 import './css/index.css';
 
 import ReactDOM from 'react-dom/client';
-import { GameCore, IGameLoop } from 'skillvir-game-core/engine/three';
+import { EngineThree, IEngineThreeGameLoop } from 'skillvir-game-core/engine/three';
 import * as THREE from 'three';
 
 import Main from '../frontend/global';
@@ -14,18 +14,22 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
 
-const gameLoop: IGameLoop = (context, deltaTime, timeStamp) => {
+const gameLoop: IEngineThreeGameLoop = ({
+  // context,
+  deltaTime,
+  timeStamp,
+}) => {
   cube.rotation.x += (90 / 180) * Math.PI * deltaTime;
   cube.rotation.y += (90 / 180) * Math.PI * deltaTime;
   // context.renderer.render(context.scene, context.camera.main);
   console.log('gameLoop', deltaTime, timeStamp);
 };
 
-const gc = new GameCore({ gameLoop });
-gc.context.scene.add(cube);
-gc.context.camera.main.position.z = 5;
-// gameCore.context.scene.background = new THREE.Color(0x00bb00);
-StoreGame.GetMethod().setGameCore(gc);
+const engineThree = new EngineThree({ gameLoop });
+engineThree.context.scene.add(cube);
+engineThree.context.camera.main.position.z = 5;
+// engineThree.context.scene.background = new THREE.Color(0x00bb00);
+StoreGame.GetMethod().setEngineThree(engineThree);
 
 FixbugInit();
 MiddlewareInit();

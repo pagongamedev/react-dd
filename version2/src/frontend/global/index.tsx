@@ -49,7 +49,7 @@ HelperTanStackRouter.RouteRootCreate({
 const indexRoute = HelperTanStackRouter.RouteCreate({
   path: '/',
   component: function Index() {
-    const { engineThree } = StoreGame.GetState(['engineThree']);
+    // const { engineThree } = StoreGame.GetState(['engineThree']);
 
     return (
       <div className="p-2">
@@ -58,7 +58,7 @@ const indexRoute = HelperTanStackRouter.RouteCreate({
           {add(1, 2)}
         </h3>
         <div className="bg-red-500 h-screen">
-          <JSXEngineThree className="h-full" engineThree={engineThree} />
+          {/* <JSXEngineThree className="h-full" engineThree={engineThree} /> */}
         </div>
       </div>
     );
